@@ -1,11 +1,9 @@
 ﻿import React from 'react'
 
-const Layout = () => {
+export const ProfileIcn = () => {
     return (
         <div>
             
         </div>
     )
 }
-
-export default Layout
