@@ -1,8 +1,6 @@
 ﻿import { VFC } from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 import { PostCategory } from './PostCategory'
 
 type Props = {
@@ -10,7 +8,7 @@ type Props = {
     category: string
 }
 
-const ImgWrapper = styled(motion.div)`
+const ImgWrapper = styled.div`
     width:98%;
     height: 25vw;
     margin: 0 auto;
@@ -19,10 +17,6 @@ const ImgWrapper = styled(motion.div)`
 `
 
 export const PostImg: VFC<Props> = ({ img, category }) => {
-    const [ref, inView] = useInView({
-        rootMargin: '-100px 0px',
-        triggerOnce: true,
-    })
     return (
             <ImgWrapper>
                 <PostCategory category={category}/>

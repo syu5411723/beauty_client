@@ -1,21 +1,28 @@
 ﻿import styled from "styled-components"
+import { pc, sp, tab } from "../../../Layout/media"
+
 
 
 const ContentWrapper = styled.div`
-    margin-left: 5vw;
+    margin-bottom: 60px;
 `
 const Text = styled.p`
-    margin-bottom: 20px;
-    font-size: 18px;
-    letter-spacing:1px;
+
+    ${sp`
+        line-height:28px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        letter-spacing:1px;
+    `}
+
 `
 
 export const ProfileContent = () => {
     return (
         <ContentWrapper>
-            <Text>test</Text>
-            <Text>test</Text>
-            <Text>test</Text>
+            <Text>東京都出身20代の人間。美容師をしながら、ITエンジニアとしても働いています。</Text>
+            <Text>お店でお客さんにおすすめしている「美容」に関することをここでも共有していきます。</Text>
+            <Text></Text>
         </ContentWrapper>
     )
 }

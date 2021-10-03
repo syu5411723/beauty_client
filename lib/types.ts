@@ -1,6 +1,6 @@
 ﻿export type Data = {
     id: string,
-    link: string,
+    title: string,
     img: string,
     category: string,
     content: string,

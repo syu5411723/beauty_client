@@ -1,19 +1,19 @@
 ﻿import styled from "styled-components"
 import Link from 'next/link'
 
-import Header from "./Header"
-import Footer from "./Footer"
+import Header from "./header/Header"
+import Footer from "./footer/Footer"
+import { ProfileCard } from "../organisms/ProfileCard"
 
 const Container = styled.div`
     width:100%;
     height:100%;
-    max-width:1300px;
 `
 
-export const Layout = ({children}) => {
+export const Layout = ({ children }) => {
     return (
         <>
-        <Header />
+            <Header />
             <Container>
                 {children}
             </Container>

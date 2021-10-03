@@ -5,7 +5,9 @@ const Name = styled.p`
     font-size: 20px;
     margin-bottom: 5px;
     letter-spacing:2px;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 900;
 `
 const Info = styled.p`
     font-size: 13px;
@@ -16,7 +18,7 @@ const Info = styled.p`
 export const ProfileName = () => {
     return (
         <>
-        <Name>柊希</Name>
+        <Name>Hiragi Syu</Name>
         <Info>IT美容師</Info>
         </>
     )

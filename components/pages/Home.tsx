@@ -1,33 +1,15 @@
-﻿import React, { createContext } from 'react'
-import styled from 'styled-components'
-
-import { PostData } from '../data/PostData'
-import { PostCategory } from '../molcules/main/post/PostCategory'
-import { Thumbnail } from '../molcules/main/Thumbnail'
-import { Article } from '../organisms/Article'
+﻿import { PostData } from '../data/PostData'
 import { CategoryLists } from '../organisms/CategoryLists'
 import { Post } from '../organisms/Post'
-import { ProfileCard } from '../organisms/ProfileCard'
 import { Inner } from '../Layout/Inner'
 
-type HomeDataProps = {
-    PostData:any
-}
-
-export const HomeDataContext = createContext({} as HomeDataProps)
-
-
-
+const filterData = PostData.filter(data => data.category === 'おすすめ')
 export const Home = () => {
     return (
-        <HomeDataContext.Provider value={{PostData}}>
-            <Thumbnail />
-            <Inner>
-                <Post data={PostData}/>
-                <CategoryLists />
-                <Article title='pick up' title2='おすすめ' data={PostData} category={false} />
-                <ProfileCard />
-            </Inner>
-        </HomeDataContext.Provider>
+        <Inner>
+            <Post data={PostData} title='new posts' title2='新着記事' flex={true} />
+            <CategoryLists />
+            <Post data={filterData} title='pick up' title2='おすすめ' flex={false} />
+        </Inner>
     )
 }

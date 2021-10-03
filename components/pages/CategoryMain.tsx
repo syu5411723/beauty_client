@@ -1,20 +1,26 @@
 ﻿import { VFC, useContext } from "react"
-import { useRouter } from "next/router"
 
 import {DataContext} from '../../pages/category/[category]'
 import { Inner } from "../Layout/Inner"
 import { Post } from "../organisms/Post"
-import { SectionTitle } from "../Layout/SectionTitlte"
 
 
 
 export const Category = () => {
     const {data} = useContext(DataContext)
-    const text = data.map(t => t.category)[1]
+    const text = data.map(t => t.category)[0]
+    const filterText = () => {
+        let result;
+        if (text === 'ヘアケア') {
+            result = 'hair care'
+        } else if (text === 'スキンケア') {
+            result = 'skin care'
+        }
+        return result
+    }
     return (
         <Inner>
-            <SectionTitle title={text} title2="カテゴリー" />
-            <Post data={data}/>
+            <Post flex={false} title={filterText()} title2={text} data={data}/>
         </Inner>
     )
 }

@@ -1,7 +1,8 @@
 ﻿import React from 'react'
 import styled from 'styled-components'
 
-import { ProfileInfo, ProfileContent, ProfileBottom } from '../molcules/main/Profile/index'
+import { Button } from '../Layout/Button'
+import { ProfileInfo, ProfileContent } from '../molcules/main/Profile/index'
 
 const Container = styled.div`
     width:100%;
@@ -22,7 +23,7 @@ export const ProfileCard = () => {
                 <ProfileInfo />
             </InfoContainer>
             <ProfileContent />
-            <ProfileBottom />
+            <Button />
         </Container>
     )
 }

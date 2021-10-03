@@ -1,7 +1,7 @@
-﻿import { motion } from "framer-motion"
-import { VFC } from "react"
-import { useInView } from "react-intersection-observer"
+﻿import { VFC } from "react"
 import styled from "styled-components"
+
+import { Line } from "./Line"
 
 type Props = {
     title: string,
@@ -11,39 +11,27 @@ const Wrapper = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
-    margin: 30px 0 40px;
+    margin: 130px 0 55px;
 `
-
-const Title = styled.div`
+const Title = styled.h2`
     font-size: 30px;
     letter-spacing:1px;
     margin-bottom: 5px;
+    font-weight:400;
+    font-family: 'Quicksand', sans-serif;
 `
-
-const Line = styled.div`
-    width: 2px;
-    height: 30px;
-    background-color: #333;
-    margin: 0 15px;
-    border-radius:10px;
-`
-const Title2 = styled.div`
+const Title2 = styled.h3`
     font-size: 18px;
     letter-spacing: 1px;
+    font-family: 'M PLUS 1p', sans-serif;
+    font-weight: 100;
 `
 
-
-const lineV = {}
-
 export const SectionTitle: VFC<Props> = ({title, title2}) => {
-    const [res, inView] = useInView({
-        rootMargin: '-100px 0px',
-        triggerOnce: true,
-    })
     return (
         <Wrapper>
                 <Title>{title}</Title>
-                <Line />
+                <Line header={false} />
                 <Title2>{title2}</Title2>
         </Wrapper>
     )

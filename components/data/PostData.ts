@@ -1,7 +1,6 @@
 ﻿export const PostData = [
     {
         id: '1',
-        link: '/',
         title:'test',
         img: '/img/sample.jpg',
         category: 'おすすめ',
@@ -10,7 +9,6 @@
     },
     {
         id: '2',
-        link: '/',
         title:'test',
         img: '/img/sample.jpg',
         category: 'ヘアケア',
@@ -19,7 +17,6 @@
     },
     {
         id: '3',
-        link: '/',
         title:'test',
         img: '/img/sample.jpg',
         category: 'スキンケア',
@@ -28,7 +25,6 @@
     },
     {
         id: '4',
-        link: '/',
         title:'test',
         img: '/img/sample.jpg',
         category: '新着記事',
@@ -37,7 +33,6 @@
     },
     {
         id: '5',
-        link: '/',
         title:'test',
         img: '/img/sample.jpg',
         category: 'おすすめ',

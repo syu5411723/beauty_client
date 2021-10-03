@@ -1,22 +1,34 @@
-﻿import React from 'react'
+﻿import React, { VFC } from 'react'
 import styled from 'styled-components'
+import { Button } from '../Layout/Button'
 import { SectionTitle } from '../Layout/SectionTitlte'
 import { PostItem } from '../molcules/main/post/PostItem'
 
-const PostContainer = styled.div`
-    display:flex;
+type Props = {
+    data: any,
+    title: string,
+    title2: string,
+    flex: any,
+}
+
+type flex = {
+    flex: boolean,
+}
+
+const PostContainer = styled.div<flex>`
+    display:${({flex}) => flex ? 'flex' : 'block' };
     justify-content:space-between;
     flex-wrap:wrap;
 `
-const Container = styled.div`
-`
 
-export const Post = ({ data }) => {
+export const Post: VFC<Props>= ({ data, title, title2, flex }) => {
     return (
-        <Container>
-            <SectionTitle title='new post' title2='新着記事'  />            <PostContainer>
-                <PostItem data={data} />
+        <>
+            <SectionTitle title={title} title2={title2} />
+            <PostContainer flex={flex}>
+                <PostItem data={data} flex={flex} />
             </PostContainer>
-        </Container>
+            <Button />
+        </>
     )
 }

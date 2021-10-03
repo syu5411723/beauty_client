@@ -1,6 +1,6 @@
 ﻿import styled from "styled-components"
 import { SectionTitle } from "../Layout/SectionTitlte"
-import { CategoryItem } from "../molcules/main/article/CategoryItem"
+import { CategoryItem } from "../molcules/main/CategoryItem"
 
 
 const ItemWrapper = styled.div`
@@ -19,4 +19,3 @@ export const CategoryLists = () => {
         </>
     )
 }
-　
