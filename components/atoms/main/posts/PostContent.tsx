@@ -1,4 +1,4 @@
-﻿import {VFC} from 'react'
+﻿import { VFC } from 'react'
 import styled from 'styled-components'
 
 type Props = {
@@ -7,15 +7,21 @@ type Props = {
 const Wrapper = styled.div`
     margin-bottom: 20px;
 `
+const Inner = styled.div`
+    padding:5px;
+`
 const Text = styled.p`
     font-size: 16px;
     letter-spacing:1px;
+
 `
 
-export const PostContent:VFC<Props> = ({content}) => {
+export const PostContent: VFC<Props> = ({ content }) => {
     return (
         <Wrapper>
-            <Text>{content}</Text>
+            <Inner>
+                <Text>{content}</Text>
+            </Inner>
         </Wrapper>
     )
 }

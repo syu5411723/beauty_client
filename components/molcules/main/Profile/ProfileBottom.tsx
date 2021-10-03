@@ -4,26 +4,30 @@ import { ProfileBottomText } from '../../../atoms/main/profle/ProfileBottomText'
 import { ProfileIcn } from '../../../atoms/main/profle/ProfileIcn'
 
 const Contaienr = styled.div`
-    width:100%;
-    height: 25vw;;
+    width:60%;
+    height: 15vw;;
     display:flex;
+    margin:0 auto;
     justify-content:center;
     align-items:center;
-    background-color: pink;
+    background-color:#E2C9D1;
     color:#fff;
+    border-radius:20px;
 `
 const Inner = styled.div`
     display:flex;
-    flex-direction:column;
-
+`
+const Dot = styled.div`
+    margin-left: 5px;
 `
 
 export const ProfileBottom = () => {
     return (
         <Contaienr>
             <Inner>
+                <ProfileIcn />
                 <ProfileBottomText />
-                <ProfileIcn></ProfileIcn>
+                <Dot>...</Dot>
             </Inner>
         </Contaienr>
     )

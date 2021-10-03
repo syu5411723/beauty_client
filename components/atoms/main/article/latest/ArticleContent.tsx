@@ -13,7 +13,7 @@ const Text = styled.p`
 
 `
 
-export const LatestContent:VFC<Props> = ({content}) => {
+export const ArticleContent:VFC<Props> = ({content}) => {
     return (
         <Wrapper>
             <Text>{content}</Text>

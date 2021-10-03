@@ -3,33 +3,29 @@ import Image from 'next/image'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import { PostCategory } from './PostCategory'
 
 type Props = {
-    img: string
+    img: string,
+    category: string
 }
 
 const ImgWrapper = styled(motion.div)`
     width:98%;
-    height: 10vw;
+    height: 25vw;
+    margin: 0 auto;
     position: relative;
+    border-radius: 3px;
 `
 
-const imgV = {
-    hidden: { opacity: 0, y: '50px' },
-    visible: { opacity: 1, y: '0px', transition:{duration:0.3} },
-}
-
-export const PostImg: VFC<Props> = ({ img }) => {
+export const PostImg: VFC<Props> = ({ img, category }) => {
     const [ref, inView] = useInView({
         rootMargin: '-100px 0px',
         triggerOnce: true,
     })
     return (
-            <ImgWrapper
-                ref={ref}
-                variants={imgV}
-                animate={inView ? 'visible' : 'hidden' }
-            >
+            <ImgWrapper>
+                <PostCategory category={category}/>
                 <Image src={img} layout='fill' objectFit='cover' />
             </ImgWrapper>
     )

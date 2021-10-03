@@ -5,10 +5,8 @@ import { ProfileInfo, ProfileContent, ProfileBottom } from '../molcules/main/Pro
 
 const Container = styled.div`
     width:100%;
-    border: 1px solid;
     padding:100px 10px 20px 10px;
     margin-top: 100px;
-    margin-bottom: 200px;
 `
 
 const InfoContainer = styled.div`

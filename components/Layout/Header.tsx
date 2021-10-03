@@ -1,21 +1,18 @@
-﻿import {pc, sp, tab} from "../Layout/media"
+﻿import {pc, sp, tab} from "./media"
 import styled from "styled-components"
 import { HeaderTitle } from "../atoms/header/HeaderTitle"
 
 const Container = styled.header`
     width:100%;
     height:12vh;
+    background-color: #E2C9D1;
     ${sp`
-        background-color: red;
         width:100%;
         height:12vh;
     `}
     ${tab`
-        background-color:blue;
-
     `}
     ${pc`
-        background-color: pink;
     `}
 `
 

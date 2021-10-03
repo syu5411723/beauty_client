@@ -1,39 +1,36 @@
 ﻿import styled from 'styled-components'
+
+
 import { PostCategory } from '../../../atoms/main/posts/PostCategory'
 import { PostContent } from '../../../atoms/main/posts/PostContent'
 import { PostCreated } from '../../../atoms/main/posts/PostCreated'
 import { PostImg } from '../../../atoms/main/posts/PostImg'
 
-import { PostData } from '../../../data/PostData'
 
 const PostWrapper = styled.div`
     width:48%;
-    background-color:gray;
-    padding: 4px;
     margin-bottom: 10px;
-    text-align:center;
 `
 const PostInner = styled.div`
-
     margin:0 auto;
 `
 
 const Content = styled.div`
     display:flex;
     flex-direction: column;
-
+    width:96%;
+    margin:0 auto;
 `
 
-export const PostItem = () => {
+export const PostItem= ({data}) => {
     return (
         <>
-        {PostData.map((post) => (
+        {data.map((post) => (
             <PostWrapper key={post.id}>
                 <PostInner>
-                    <PostImg img={post.img}/>
+                    <PostImg img={post.img} category={post.category} />
                     <Content>
-                        <PostCategory category={post.category} />
-                        <PostContent content={post.content} />
+                        <PostContent content={post.title} />
                         <PostCreated created={post.created} />
                     </Content>
                 </PostInner>

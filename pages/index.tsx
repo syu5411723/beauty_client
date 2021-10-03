@@ -1,6 +1,6 @@
 import Head from "next/head"
 import styled from "styled-components"
-import { Main } from "../components/templates/Main"
+import { Home } from "../components/pages/Home"
 
 
 
@@ -12,7 +12,7 @@ const index = () => {
     <Head>
       <title>美容ソムリエの</title>
     </Head>
-    <Main />
+    <Home />
     </>
   )
 }

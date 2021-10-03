@@ -5,15 +5,17 @@ type Props = {
     category: string
 }
 const Wrapper = styled.div`
-    width:55%;
-    height:6vw;
-    margin:3vw auto;
-    background-color: #999;
-    border-radius:10px;
+    width:35%;
+    height:5vw;
+    font-size: 8px;
+    right:0;
+    background: #C9BAAF;
     display:flex;
     align-items:center;
     justify-content:center;
-    color:#fff;
+    color:#333;
+    position:absolute;
+    z-index: 2;
 `
 
 export const PostCategory:VFC<Props> = ({category}) => {

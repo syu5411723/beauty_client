@@ -14,7 +14,7 @@ const ImgWrapper = styled.div`
 `
 
 
-export const LatestImg:VFC<Props> = ({src}) => {
+export const ArticleImg:VFC<Props> = ({src}) => {
     return (
         <ImgWrapper>
             <Image src={src} layout='fill' objectFit='cover' />

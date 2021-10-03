@@ -1,21 +1,33 @@
 ﻿import styled from 'styled-components'
-import { LatestTitlte } from '../atoms/main/article/ArticleTitlte'
-import { Latest } from '../molcules/main/article/Latest'
+import { VFC } from 'react'
+
+
+import { ArticleItem } from '../molcules/main/article/ArticlItem'
+import { SectionTitle } from '../Layout/SectionTitlte'
+
+type Props = {
+    title: string,
+    title2: string,
+    data: {},
+    category: boolean,
+}
 
 const Container = styled.div`
-    border:1px solid;
+    margin-top: 200px;
+    border-radius: 20px;
+
 `
 const Inner = styled.div`
     width:95%;
     margin:0 auto;
 `
 
-export const Article = ({title}) => {
+export const Article: VFC<Props> = ({ title, data, title2 }) => {
     return (
         <Container>
             <Inner>
-                <LatestTitlte title={title} />
-                <Latest />
+                <SectionTitle title={title} title2={title2} />
+                <ArticleItem data={data} />
             </Inner>
         </Container>
     )

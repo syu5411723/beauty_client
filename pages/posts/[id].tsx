@@ -1,50 +1,20 @@
 ﻿import { VFC } from 'react'
-import fs from 'fs'
-import path from 'path'
-import { GetStaticProps, GetStaticPaths } from 'next'
+import { useRouter } from "next/router";
 
-import { Layout } from '../../components/Layout/Layout'
-import { PostData } from '../../components/data/PostData'
-import { Post } from '../../components/organisms/Post'
+import type { Data } from '../../lib/types'
+import useSWR from 'swr'
 
-type PathPramas = {
-    id: string
-}
+const fetcher = (url) => fetch(url).then((res) => res.json())
 
-type PageProps = {
-    post: {}
-}
-export const getStaticPaths= async () => {
-    const paths = PostData.map(post => ({
-        params:{
-            id: post.id,
-        }
-    }))
-    return { paths, fallback: false }
-}
-export const getStaticProps = async ({params}) => {
-    const getPostData = (id) => {
-        return {
-            id,
-        }
-    }
-    const post = getPostData(params.id)
-    return {
-        props: {
-            post
-        }
-    }
-}
-const Posts = ({ post }) => {
-    console.log(post.id)
-    return (
-        <>
-            <Layout>
-                {PostData[`${post.id}`].slug}
-                {post.id}
-            </Layout>
-        </>
-    )
+
+const Post:VFC = () => {
+    const router = useRouter();
+    const { id } = router.query;
+    const { data, error } = useSWR<Data>(`../api/posts/${id}`, fetcher)
+    if (error) return <p>Failed to load</p>
+    if (!data) return <p>Loading...</p>
+
+    return <p>{data.id}, {data.id}, {data.category}</p>
 }
 
-export default Posts
+export default Post
