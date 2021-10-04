@@ -1,18 +1,17 @@
 import '../styles/globals.css'
 import Head from 'next/head'
-import {Layout} from '../components/Layout/Layout'
+import { AppProps } from 'next/app'
+import { AnimatePresence } from 'framer-motion'
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <>
-    <Layout>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1"  />
-      </Head>
-      <Component {...pageProps} />
-    </Layout>
+        <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </Head>
+        <AnimatePresence exitBeforeEnter initial={false} >
+          <Component {...pageProps} key={router.route} />
+        </AnimatePresence>
     </>
   )
 }
-
-export default MyApp

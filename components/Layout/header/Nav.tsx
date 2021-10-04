@@ -4,53 +4,55 @@ import Link from 'next/link'
 
 import { pc, sp, tab } from '../media'
 import { filterData } from '../../molcules/main/CategoryItem'
-import { motion } from 'framer-motion'
 
 
 const NavWrapper = styled.div`
-    width:80%;
+    width:85%;
     height:100%;
     margin:0 auto;
     display:flex;
     align-items:center;
     justify-content:space-between;
-
 `
-const LinkWrapper = styled(motion.div)`
+const LinkWrapper = styled.div`
     display:flex;
-    justify-content:center;
+    justify-content:space-between;
     align-items:center;
-    width:20%;
+    width:25%;
     height:100%;
     cursor:pointer;
     color:#fff;
+    position:relative;
+    &:hover{
+    }
+`
+const LineWrapper = styled.div`
+    width: 1px;
+    height: 24px;
+    background-color: rgba(255,255,255,0.4);
 `
 const Item = styled.p`
     ${sp`
         font-size: 12px;
     `}
+
 `
-const linkV = {
-    hidden: {scale: 1},
-    visible: {scale: 1.1, transition:{type : 'spring', stiffness: 1000} },
-}
 
 export const Nav = () => {
     return (
         <NavWrapper>
+            <LineWrapper />
             {filterData.map(item => (
-                <LinkWrapper
-                    key={item.id}
-                    variants={linkV}
-                    initial='hidden'
-                    whileHover='visible'
-                >
-                    <Link href={`/category/${item.category}`}>
-                        <Item>{item.category}</Item>
-                    </Link>
-                </LinkWrapper>
-            ))
+                    <LinkWrapper key={item.id}>
+                        <LineWrapper />
+                        <Link href={`/category/${item.category}`} scroll={false}>
+                            <Item>{item.category}</Item>
+                        </Link>
+                        <LineWrapper />
+                    </LinkWrapper>
+                ))
             }
+            <LineWrapper />
         </NavWrapper >
     )
 }

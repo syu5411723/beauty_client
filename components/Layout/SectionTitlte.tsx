@@ -11,7 +11,7 @@ const Wrapper = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
-    margin: 100px 0 55px;
+    margin: 80px 0 45px;
 `
 const Title = styled.h2`
     font-size: 30px;
@@ -26,13 +26,18 @@ const Title2 = styled.h3`
     font-family: 'M PLUS 1p', sans-serif;
     font-weight: 100;
 `
+const LineWrapper = styled.div`
 
-export const SectionTitle: VFC<Props> = ({title, title2}) => {
+`
+
+export const SectionTitle: VFC<Props> = ({ title, title2 }) => {
     return (
         <Wrapper>
-                <Title>{title}</Title>
+            <Title>{title}</Title>
+            <LineWrapper>
                 <Line header={false} />
-                <Title2>{title2}</Title2>
+            </LineWrapper>
+            <Title2>{title2}</Title2>
         </Wrapper>
     )
 }

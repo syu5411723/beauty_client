@@ -1,5 +1,5 @@
 ﻿import { NextApiRequest, NextApiResponse } from "next"
-import { PostData } from "../../../components/data/PostData"
+import { PostData } from "../../../lib/data/PostData"
 import { Data } from "../../../lib/types"
 
 

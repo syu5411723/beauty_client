@@ -1,4 +1,4 @@
-﻿import { PostData } from '../data/PostData'
+﻿import { PostData } from '../../lib/data/PostData'
 import { CategoryLists } from '../organisms/CategoryLists'
 import { Post } from '../organisms/Post'
 import { Inner } from '../Layout/Inner'

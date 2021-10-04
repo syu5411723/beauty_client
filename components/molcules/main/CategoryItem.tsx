@@ -2,7 +2,7 @@
 import Link from 'next/link'
 
 import { CategoryText } from "../../atoms/main/category/CategoryText"
-import { PostData } from '../../data/PostData'
+import { PostData } from '../../../lib/data/PostData'
 import { motion } from "framer-motion"
 
 const Wrapper = styled(motion.div)`
@@ -12,16 +12,16 @@ const Wrapper = styled(motion.div)`
     display:flex;
     justify-content: center;
     align-items:center;
-    border:2px solid;
+    border:2px solid #333;
     border-radius:52% 48% 52% 48% / 51% 51% 49% 49%;
     cursor:pointer;
+    transition: all 0.1s;
+    &:hover {
+        color: #fff;
+        background-color: #E2C9D1;
+        transition: all 0.25s;
+    }
 `
-const wrapperV = {
-    hidden: {backgroundColor: '#fff'},
-    visible: {backgroundColor: '#E2C9D1', transition: {duration:0.2}},
-    exit: {transition: {duration:0}}
-}
-
 export const filterData = PostData.filter((element, index, self) =>
     self.findIndex(e =>
         e.category === element.category
@@ -32,13 +32,8 @@ export const CategoryItem = () => {
     return (
         <>
             {filterData.map(((post, index) => (
-                <Link href={`/category/${post.category}`} key={index} >
-                    <Wrapper
-                        variants={wrapperV}
-                        initial='hidden'
-                        whileHover='visible'
-                        exit='exit'
-                    >
+                <Link href={`/category/${post.category}`} key={index} scroll={false} >
+                    <Wrapper>
                         <CategoryText category={post.category} />
                     </Wrapper>
                 </Link>

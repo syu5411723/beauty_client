@@ -1,7 +1,11 @@
-﻿import React from 'react'
+﻿import React, { VFC } from 'react'
 import styled from 'styled-components'
 import { ProfileBottomText } from '../atoms/main/profle/ProfileBottomText'
 import { ProfileIcn } from '../atoms/main/profle/ProfileIcn'
+
+type Props = {
+    text: string,
+}
 
 const Contaienr = styled.div`
     width:60%;
@@ -21,12 +25,12 @@ const Dot = styled.div`
     margin-left: 5px;
 `
 
-export const Button = () => {
+export const Button: VFC<Props> = ({text}) => {
     return (
         <Contaienr>
             <Inner>
                 <ProfileIcn />
-                <ProfileBottomText />
+                <ProfileBottomText text={text} />
                 <Dot>...</Dot>
             </Inner>
         </Contaienr>

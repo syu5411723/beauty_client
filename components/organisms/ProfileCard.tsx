@@ -7,7 +7,6 @@ import { ProfileInfo, ProfileContent } from '../molcules/main/Profile/index'
 const Container = styled.div`
     width:100%;
     padding:100px 10px 20px 10px;
-    margin-top: 100px;
 `
 
 const InfoContainer = styled.div`
@@ -23,7 +22,7 @@ export const ProfileCard = () => {
                 <ProfileInfo />
             </InfoContainer>
             <ProfileContent />
-            <Button />
+            <Button text="Profile" />
         </Container>
     )
 }

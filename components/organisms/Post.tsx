@@ -28,7 +28,7 @@ export const Post: VFC<Props>= ({ data, title, title2, flex }) => {
             <PostContainer flex={flex}>
                 <PostItem data={data} flex={flex} />
             </PostContainer>
-            <Button />
+            <Button text='more' />
         </>
     )
 }

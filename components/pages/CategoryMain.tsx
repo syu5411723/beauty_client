@@ -1,6 +1,6 @@
 ﻿import { VFC, useContext } from "react"
 
-import { DataContext } from '../../pages/category/[category]'
+import { DataContext } from '../../pages/category/[slug]'
 import { Inner } from "../Layout/Inner"
 import { Post } from "../organisms/Post"
 import { CategoryTitle } from '../molcules/main/categoryPage/CategoryTitle'
@@ -8,8 +8,8 @@ import { CategoryTitle } from '../molcules/main/categoryPage/CategoryTitle'
 
 
 export const Category = () => {
-    const { data } = useContext(DataContext)
-    const text = data.map(t => t.category)[0]
+    const { filterData } = useContext(DataContext)
+    const text = filterData.map(t => t.category)[0]
     const filterText = () => {
         let result;
         if (text === 'ヘアケア') {
@@ -22,7 +22,7 @@ export const Category = () => {
     return (
         <Inner>
             <CategoryTitle />
-            <Post flex={false} title={filterText()} title2={text} data={data} />
+            <Post flex={false} title={filterText()} title2={text} data={filterData} />
         </Inner>
     )
 }
