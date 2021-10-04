@@ -2,10 +2,10 @@
 import {VFC} from 'react'
 
 
-import { PostCategory } from '../../../atoms/main/posts/PostCategory'
-import { PostContent } from '../../../atoms/main/posts/PostContent'
-import { PostCreated } from '../../../atoms/main/posts/PostCreated'
-import { PostImg } from '../../../atoms/main/posts/PostImg'
+import { PostCategory } from '../../atoms/main/posts/PostCategory'
+import { PostContent } from '../../atoms/main/posts/PostContent'
+import { PostCreated } from '../../atoms/main/posts/PostCreated'
+import { PostImg } from '../../atoms/main/posts/PostImg'
 
 type Props = {
     data:any,

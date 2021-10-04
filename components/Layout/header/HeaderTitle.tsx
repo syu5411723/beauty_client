@@ -13,6 +13,6 @@ const Title = styled.h1`
 `
 export const HeaderTitle = () => {
     return (
-            <Title>IT美容師のおすすめログ</Title>
+            <Title>IT美容師のすすめ</Title>
     )
 }

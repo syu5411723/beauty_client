@@ -11,7 +11,7 @@ const Wrapper = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
-    margin: 130px 0 55px;
+    margin: 100px 0 55px;
 `
 const Title = styled.h2`
     font-size: 30px;

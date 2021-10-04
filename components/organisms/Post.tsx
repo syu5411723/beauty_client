@@ -2,7 +2,7 @@
 import styled from 'styled-components'
 import { Button } from '../Layout/Button'
 import { SectionTitle } from '../Layout/SectionTitlte'
-import { PostItem } from '../molcules/main/post/PostItem'
+import { PostItem } from '../molcules/main/PostItem'
 
 type Props = {
     data: any,

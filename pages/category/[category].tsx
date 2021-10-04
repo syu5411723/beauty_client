@@ -1,12 +1,12 @@
-﻿import { VFC, createContext } from 'react'
+﻿import { createContext } from 'react'
 import { useRouter } from "next/router";
 import useSWR from 'swr'
 
-import {Category} from '../../components/pages/CategoryMain'
+import { Category } from '../../components/pages/CategoryMain'
 
 
 type ContextProps = {
-    data:any
+    data: any
 }
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
@@ -19,12 +19,11 @@ const CategoryPage = () => {
     const { data, error } = useSWR(`../api/category/${category}`, fetcher)
     if (error) return <p>Failed to load</p>
     if (!data) return <p>Loading...</p>
-    const subData = data
     return (
         <>
-        <DataContext.Provider value={{data}} >
-        <Category />
-        </DataContext.Provider>
+            <DataContext.Provider value={{ data }} >
+                <Category />
+            </DataContext.Provider>
         </>
     )
 }
