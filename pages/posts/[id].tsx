@@ -21,11 +21,10 @@ export const getStaticProps = async (context) =>{
     const postData = data.filter(item => item.id === id);
     return {
         props: {
-            postData
+            postData,
         }
     }
 }
-
 
 export const DataContext = createContext({} as ContextProps)
 
@@ -34,7 +33,7 @@ const Post = ({postData}) => {
         <>
         <DataContext.Provider value={{postData}}>
             <PostMain/>
-            {postData.map(i => i.category)}
+            {postData[0].category}
         </DataContext.Provider>
         </>
     )

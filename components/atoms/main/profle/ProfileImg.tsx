@@ -1,4 +1,4 @@
-﻿import Image from "next/dist/client/image"
+﻿import Image from "next/image"
 import styled from "styled-components"
 import {pc,sp} from '../../../Layout/media'
 
@@ -16,7 +16,7 @@ const ImgWrapper = styled.div`
 export const ProfileImg = () => {
     return (
         <ImgWrapper>
-            <Image src='/img/profile.jpeg' layout='fill' objectFit='cover' />
+            <Image src='/img/profile.jpg' layout='fill' objectFit='cover' />
         </ImgWrapper>
     )
 }

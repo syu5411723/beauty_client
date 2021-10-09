@@ -4,8 +4,8 @@ import styled from 'styled-components'
 type Props = {
     category: string,
 }
-const Text = styled.div`
-    font-size: 20px;
+const Text = styled.p`
+    font-size: 16px;
 `
 
 export const CategoryText: VFC<Props> = ({ category }) => {

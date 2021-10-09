@@ -21,6 +21,8 @@ const PostWrapper = styled(motion.div)<flex>`
     margin-bottom:${({ flex }) => flex ? '20px' : '40px'};;
     border-radius: 5px;
     box-shadow:0px 0px 5px #c8c8c8, 0px 0px 5px #c8c8c8;
+    background-color: #fff;
+    cursor:pointer;
     transition: all 0.1s;
     &:hover {
         box-shadow:5px 5px 10px #c8c8c8, -5px -5px 10px #e5e5e5;

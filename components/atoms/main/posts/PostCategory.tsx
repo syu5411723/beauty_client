@@ -9,7 +9,7 @@ const Wrapper = styled.div`
     height:5vw;
     font-size: 8px;
     right:0;
-    background: #C9BAAF;
+    background: #bfbec5;
     display:flex;
     align-items:center;
     justify-content:center;

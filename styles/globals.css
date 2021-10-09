@@ -14,10 +14,18 @@ body {
 a {
   text-decoration: none;
   cursor: pointer;
+  color: #333;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+#inner__link {
+  color:#1558d6;
+  display: inline-block;
+}
+#yellow__line {
+  background:linear-gradient(transparent 50%, #ffff66 0%);
 }

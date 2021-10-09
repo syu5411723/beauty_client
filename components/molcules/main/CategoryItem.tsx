@@ -6,8 +6,8 @@ import { PostData } from '../../../lib/data/PostData'
 import { motion } from "framer-motion"
 
 const Wrapper = styled(motion.div)`
-    width:40vw;
-    height:30vw;
+    width:30%;
+    height:20vw;
     margin-bottom: 30px;
     display:flex;
     justify-content: center;

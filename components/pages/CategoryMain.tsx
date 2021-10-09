@@ -1,9 +1,10 @@
 ﻿import { VFC, useContext } from "react"
 
 import { DataContext } from '../../pages/category/[slug]'
-import { Inner } from "../Layout/Inner"
+import { Layout } from '../Layout/Layout'
 import { Post } from "../organisms/Post"
 import { CategoryTitle } from '../molcules/main/categoryPage/CategoryTitle'
+import { BreadList } from "../Layout/BreadList"
 
 
 
@@ -19,10 +20,20 @@ export const Category = () => {
         }
         return result
     }
+    const BreadText = () => {
+        let result;
+        if (text === 'ヘアケア') {
+            result = 'ヘアケア'
+        } else if (text === 'スキンケア') {
+            result = 'スキンケア'
+        }
+        return result
+    }
     return (
-        <Inner>
+        <Layout>
+            <BreadList home={false} category={true} post={false} categoryText={BreadText()} postText='' />
             <CategoryTitle />
             <Post flex={false} title={filterText()} title2={text} data={filterData} />
-        </Inner>
+        </Layout>
     )
 }

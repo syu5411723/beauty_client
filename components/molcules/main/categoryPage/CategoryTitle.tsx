@@ -1,5 +1,5 @@
 ﻿import styled from "styled-components"
-import { SectionTitle } from "../../../Layout/SectionTitlte"
+import { SectionTitle } from "../../../Layout/main/SectionTitlte"
 
 
 const Wrapper = styled.div`

@@ -1,7 +1,7 @@
 ﻿import React from 'react'
 import styled from 'styled-components'
 
-import { Button } from '../Layout/Button'
+import { Button } from '../Layout/main/Button'
 import { ProfileInfo, ProfileContent } from '../molcules/main/Profile/index'
 
 const Container = styled.div`
@@ -22,7 +22,7 @@ export const ProfileCard = () => {
                 <ProfileInfo />
             </InfoContainer>
             <ProfileContent />
-            <Button text="Profile" />
+            <Button link="/profile" text="Profile" />
         </Container>
     )
 }
