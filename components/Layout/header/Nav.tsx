@@ -1,5 +1,4 @@
-﻿import React from 'react'
-import styled from 'styled-components'
+﻿import styled from 'styled-components'
 import Link from 'next/link'
 
 import { pc, sp, tab } from '../media'
@@ -7,7 +6,7 @@ import { filterData } from '../../molcules/main/CategoryItem'
 
 
 const NavWrapper = styled.div`
-    width:85%;
+    width:90%;
     height:100%;
     margin:0 auto;
     display:flex;
@@ -33,9 +32,14 @@ const LineWrapper = styled.div`
 `
 const Item = styled.p`
     ${sp`
-        font-size: 12px;
+        font-size: 11px;
     `}
-
+    ${tab`
+        font-size:16px
+    `}
+    ${pc`
+        font-size:18px
+    `}
 `
 
 export const Nav = () => {
@@ -43,14 +47,14 @@ export const Nav = () => {
         <NavWrapper>
             <LineWrapper />
             {filterData.map(item => (
-                    <LinkWrapper key={item.id}>
-                        <LineWrapper />
-                        <Link href={`/category/${item.category}`} scroll={false}>
-                            <Item>{item.category}</Item>
-                        </Link>
-                        <LineWrapper />
-                    </LinkWrapper>
-                ))
+                <LinkWrapper key={item.id}>
+                    <LineWrapper />
+                    <Link href={`/category/${item.category}`} scroll={false}>
+                        <Item>{item.category}</Item>
+                    </Link>
+                    <LineWrapper />
+                </LinkWrapper>
+            ))
             }
             <LineWrapper />
         </NavWrapper >

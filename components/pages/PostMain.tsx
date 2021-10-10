@@ -7,17 +7,19 @@ import { Layout } from "../Layout/Layout"
 import { DataContext } from '../../pages/posts/[id]'
 import { Talk } from '../molcules/design/Talk'
 import { BreadList } from '../Layout/BreadList'
-
+import { Inner } from '../Layout/Inner'
 
 export const PostMain = () => {
     const { postData } = useContext(DataContext)
     return (
         <Layout>
-            <BreadList home={false} category={false} post={true} categoryText={postData[0].category} postText={postData[0].title} />
-            <HeadFrame />
-            <Talk me={false} />
-            <Head head={postData[0].head1} HeadLink={postData[0].head1} />
-            <PostText />
+            <Inner>
+                <BreadList home={false} category={false} post={true} categoryText={postData[0].category} postText={postData[0].title} />
+                <HeadFrame />
+                <Talk me={false} />
+                <Head head={postData[0].head1} HeadLink={postData[0].head1} />
+                <PostText />
+            </Inner>
         </Layout>
     )
 }

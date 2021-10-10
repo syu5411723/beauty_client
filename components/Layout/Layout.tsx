@@ -15,13 +15,10 @@ const TopWrapper = styled(motion.div)`
 
 
 const Container = styled.div`
-    width:100%;
+    width:100vw;
     height:100%;
 `
-const LayoutInner = styled(motion.div)`
-    width:92%;
-    margin:0 auto;
-`
+const LayoutInner = styled(motion.div)``
 const innerV = {
     hidden: { opacity: 0, x: '-20px' },
     visible: { opacity: 1, x: 0, transition: { duration: 0.3 } },
@@ -50,7 +47,7 @@ export const Layout = ({ children }) => {
             >
                 <div ref={ref} className='sample' />
                 {children}
-                <ProfileCard />
+                <ProfileCard side={false} />
             </LayoutInner>
             <Footer />
             <TopWrapper

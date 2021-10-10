@@ -7,8 +7,8 @@ import { motion } from "framer-motion"
 
 const Wrapper = styled(motion.div)`
     width:30%;
-    height:20vw;
-    margin-bottom: 30px;
+    height:calc(4.6875rem + ((1vw - 3.5px) * 13.1579));
+    margin-bottom: 25px;
     display:flex;
     justify-content: center;
     align-items:center;

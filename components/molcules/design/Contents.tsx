@@ -1,10 +1,9 @@
-﻿import React from 'react'
-import { Head } from '../../atoms/design/main/Head'
+﻿import { Head } from '../../atoms/design/main/Head'
 
-export const Contents = ({head}) => {
+export const Contents = ({ head }) => {
     return (
         <>
-            <Head head={head} />
+            <Head head={head} HeadLink='/profile'/>
         </>
     )
 }

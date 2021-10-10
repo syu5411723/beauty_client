@@ -1,5 +1,4 @@
-﻿import React from 'react'
-import { ContentFrame } from '../../atoms/design/main/profile/ContentFrame'
+﻿import { ContentFrame } from '../../atoms/design/main/profile/ContentFrame'
 import { ContentFrame2 } from '../../atoms/design/main/profile/ContentFrame2'
 import { IntroText } from '../../molcules/design/IntroText'
 

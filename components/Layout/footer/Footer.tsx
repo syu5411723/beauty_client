@@ -1,14 +1,27 @@
-﻿import React from 'react'
-import styled from 'styled-components'
+﻿import styled from 'styled-components'
+
+import { sp, pc, tab } from '../media'
 
 const Container = styled.footer`
     width: 100%;
     height: 50px;
     text-align: center;
+    ${sp`
+        margin-top:30px;
+        font-size: 13px;
+    `}
+    ${tab`
+        margin-top:50px;
+        font-size: 14px;
+    `}
+    ${pc`
+        margin-top:50px;
+        font-size: 15px;
+    `}
 `
 const Text = styled.p`
     opacity: 0.7;
-    font-size: 14px;
+
 `
 
 const Footer = () => {

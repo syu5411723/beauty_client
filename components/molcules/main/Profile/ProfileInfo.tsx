@@ -1,4 +1,4 @@
-﻿import React from 'react'
+﻿
 import styled from 'styled-components'
 
 import { ProfileImg } from '../../../atoms/main/profle/ProfileImg'
@@ -10,10 +10,10 @@ const InfoInner = styled.div`
     text-align:center;
 `
 
-export const ProfileInfo = () => {
+export const ProfileInfo = ({side}) => {
     return (
         <InfoInner>
-            <ProfileImg />
+            <ProfileImg side={side} />
             <ProfileName />
         </InfoInner>
     )

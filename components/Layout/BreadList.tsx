@@ -1,4 +1,5 @@
 ﻿import styled from "styled-components"
+import Link from 'next/link'
 import { VFC } from 'react'
 
 type Props = {
@@ -19,7 +20,7 @@ type Post = {
 }
 
 const Wrapper = styled.div<Category>`
-    width:${({category}) => category ? '28%' : '38%'};
+    width:${({ category }) => category ? '28%' : '38%'};
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -28,19 +29,19 @@ const Wrapper = styled.div<Category>`
     letter-spacing:0.03em;
 `
 const HomeText = styled.p<Home>`
-    ${({home}) => !home && `
+    ${({ home }) => !home && `
         color:#1558d6;
         border-bottom:1px solid #1558d6;
     `}
 `
 const CategoryText = styled.p<Category>`
-    ${({category}) => !category && `
+    ${({ category }) => !category && `
         color:#1558d6;
         border-bottom:1px solid #1558d6;
     `}
 `
 const PostText = styled.p<Post>`
-    ${({post}) => !post && `
+    ${({ post }) => !post && `
         color:#1558d6;
         border-bottom:1px solid #1558d6;
     `}
@@ -55,16 +56,22 @@ export const BreadList: VFC<Props> = ({ home, category, post, categoryText, post
                 {home && <HomeText home={home}>Home</HomeText>}
                 {category && (
                     <>
-                        <HomeText home={home}>Home</HomeText>
+                        <Link href='/'>
+                            <HomeText home={home}>Home</HomeText>
+                        </Link>
                         <div>&gt;</div>
                         <CategoryText category={category}>{categoryText}</CategoryText>
                     </>
                 )}
                 {post && (
                     <>
-                        <HomeText home={home}>Home</HomeText>
+                        <Link href='/'>
+                            <HomeText home={home}>Home</HomeText>
+                        </Link>
                         <div>&gt;</div>
-                        <CategoryText category={category}>{categoryText}</CategoryText>
+                        <Link href={`/category/${categoryText}`}>
+                            <CategoryText category={category}>{categoryText}</CategoryText>
+                        </Link>
                         <div>&gt;</div>
                         <PostText post={post}>{postText}</PostText>
                     </>

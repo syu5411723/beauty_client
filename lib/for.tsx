@@ -123,7 +123,7 @@ export const talkRoop = (i, talk1, talk2, talk3, talk4, talk5, talk6) => {
                 </Wrapper>
                 <Wrapper me={true}>
                     <ImgWrapper me={true}>
-                        <Image src="/img/profile2.jpg" layout="fill" objectFit="cover" />
+                        <Image src="/img/profile.jpg" layout="fill" objectFit="cover" />
                     </ImgWrapper>
                     <SpeechBalloon me={true} text={talk2} />
                 </Wrapper>
@@ -135,7 +135,7 @@ export const talkRoop = (i, talk1, talk2, talk3, talk4, talk5, talk6) => {
                 </Wrapper>
                 <Wrapper me={true}>
                     <ImgWrapper me={true}>
-                        <Image src="/img/profile2.jpg" layout="fill" objectFit="cover" />
+                        <Image src="/img/profile.jpg" layout="fill" objectFit="cover" />
                     </ImgWrapper>
                     <SpeechBalloon me={true} text={talk4} />
                 </Wrapper>
@@ -152,7 +152,7 @@ export const talkRoop = (i, talk1, talk2, talk3, talk4, talk5, talk6) => {
                 </Wrapper>
                 <Wrapper me={true}>
                     <ImgWrapper me={true}>
-                        <Image src="/img/profile2.jpg" layout="fill" objectFit="cover" />
+                        <Image src="/img/profile.jpg" layout="fill" objectFit="cover" />
                     </ImgWrapper>
                     <SpeechBalloon me={true} text={talk2} />
                 </Wrapper>
@@ -164,7 +164,7 @@ export const talkRoop = (i, talk1, talk2, talk3, talk4, talk5, talk6) => {
                 </Wrapper>
                 <Wrapper me={true}>
                     <ImgWrapper me={true}>
-                        <Image src="/img/profile2.jpg" layout="fill" objectFit="cover" />
+                        <Image src="/img/profile.jpg" layout="fill" objectFit="cover" />
                     </ImgWrapper>
                     <SpeechBalloon me={true} text={talk4} />
                 </Wrapper>
@@ -176,7 +176,7 @@ export const talkRoop = (i, talk1, talk2, talk3, talk4, talk5, talk6) => {
                 </Wrapper>
                 <Wrapper me={true}>
                     <ImgWrapper me={true}>
-                        <Image src="/img/profile2.jpg" layout="fill" objectFit="cover" />
+                        <Image src="/img/profile.jpg" layout="fill" objectFit="cover" />
                     </ImgWrapper>
                     <SpeechBalloon me={true} text={talk6} />
                 </Wrapper>

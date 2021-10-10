@@ -6,16 +6,14 @@ import { Nav } from "./Nav"
 
 const Container = styled.header`
     width:100%;
-    height:20vh;
-    /* background-color: #E2C9D1; */
-    width:100%;
-        height:16vh;
     ${sp`
-
+        height:12vh;
     `}
     ${tab`
+        height:14vh;
     `}
     ${pc`
+        height:16vh;
     `}
 `
 

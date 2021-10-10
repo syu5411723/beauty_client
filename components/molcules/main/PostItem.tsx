@@ -10,15 +10,16 @@ import { motion } from 'framer-motion'
 type Props = {
     data: any,
     flex: boolean,
+    home: boolean;
 }
 
 type flex = {
     flex: boolean,
 }
 
-const PostWrapper = styled(motion.div)<flex>`
+const PostWrapper = styled(motion.div) <flex>`
     width:${({ flex }) => flex ? '48%' : '100%'};
-    margin-bottom:${({ flex }) => flex ? '20px' : '40px'};;
+    margin-bottom:${({ flex }) => flex ? '20px' : '25px'};;
     border-radius: 5px;
     box-shadow:0px 0px 5px #c8c8c8, 0px 0px 5px #c8c8c8;
     background-color: #fff;
@@ -41,22 +42,42 @@ const Content = styled.div<flex>`
     width:96%;
     margin:0 auto;
 `
-export const PostItem: VFC<Props> = ({ data, flex }) => {
+export const PostItem: VFC<Props> = ({ home, data, flex }) => {
     return (
         <>
-            {data.map((post) => (
-                <PostWrapper key={post.id} flex={flex}>
-                    <Link href={`/posts/${post.id}`} scroll={false}>
-                        <PostInner flex={flex} >
-                            <PostImg img={post.img} category={post.category} />
-                            <Content flex={flex} >
-                                <PostContent content={post.title} />
-                                <PostCreated created={post.created} />
-                            </Content>
-                        </PostInner>
-                    </Link>
-                </PostWrapper>
-            ))}
+            {home ? (
+                <>
+                    {[...Array(10)].map((_, i) => (
+                        <PostWrapper key={data[i].id} flex={flex}>
+                            <Link href={`/posts/${data[i].id}`} scroll={false}>
+                                <PostInner flex={flex} >
+                                    <PostImg img={data[i].img} category={data[i].category} />
+                                    <Content flex={flex} >
+                                        <PostContent content={data[i].title} />
+                                        <PostCreated created={data[i].created} />
+                                    </Content>
+                                </PostInner>
+                            </Link>
+                        </PostWrapper>
+                    ))}
+                </>
+            ) : (
+                <>
+                    {[...Array(2)].map((_, i) => (
+                        <PostWrapper key={data[i].id} flex={flex}>
+                            <Link href={`/posts/${data[i].id}`} scroll={false}>
+                                <PostInner flex={flex} >
+                                    <PostImg img={data[i].img} category={data[i].category} />
+                                    <Content flex={flex} >
+                                        <PostContent content={data[i].title} />
+                                        <PostCreated created={data[i].created} />
+                                    </Content>
+                                </PostInner>
+                            </Link>
+                        </PostWrapper>
+                    ))}
+                </>
+            )}
         </>
     )
 }

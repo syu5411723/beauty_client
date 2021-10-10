@@ -4,6 +4,8 @@ import { CategoryItem } from "../molcules/main/CategoryItem"
 
 const Container = styled.div`
     margin-top: 80px;
+    width: 92%;
+    margin:0 auto;
 `
 
 const ItemWrapper = styled.div`

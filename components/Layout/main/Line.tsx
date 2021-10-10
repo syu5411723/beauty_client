@@ -7,11 +7,16 @@ type MarginProps = {
 }
 
 const LineWrapper = styled(motion.div)<MarginProps>`
-    width: 2px;
-    height: 30px;
+    width: calc(0.125rem + ((1vw - 3.5px) * 0.1053));
+    height: calc(1.625rem + ((1vw - 3.5px) * 2.1053));
     background-color: #333;
-    margin: ${({header}) => header ? "0 0 0 20px" :"0 15px"};
+    margin: ${({header}) => header ? "0 0 0 40px" :"0 15px"};
     border-radius:10px;
+    ${({header}) => header ? `
+    margin:0  calc(0.625rem + ((1vw - 3.5px) * 1.7895));
+    ` : `
+    margin:0 calc(0.9375rem + ((1vw - 3.5px) * 2.6316))
+    `}
 `
 const lineV = {
     hidden: { opacity: 0, y: '15px' },

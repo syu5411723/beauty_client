@@ -3,7 +3,7 @@
         id: '1',
         title: 'test',
         img: '/img/sample.jpg',
-        category: 'おすすめ',
+        category: 'ヘアケア',
         created: '2021.12.1',
         // frame-data
         frameId: 3,
@@ -54,8 +54,8 @@
         id: '4',
         title: 'test',
         img: '/img/sample.jpg',
-        category: '新着記事',
-        created: '2021.12.1',
+        category: 'スキンケア',
+        created: '2021 9 23',
         // frame-data
         frameId: 3,
         fText1: '', fText2: '', fText3: '',
@@ -69,6 +69,91 @@
     },
     {
         id: '5',
+        title: 'test',
+        img: '/img/sample.jpg',
+        category: '健康',
+        created: '2021.12.1',
+        // frame-data
+        frameId: 3,
+        fText1: '', fText2: '', fText3: '',
+        // postPage-text-data
+        textId: 3,
+        head1: 'Head1', head2: 'Head2', head3: 'Head3',
+        text1: 'aa', text2: 'vv', text3: 'ee',
+        //postPage-talk-data
+        talkId: 2,
+        talk1: 'talk1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4'
+    },
+    {
+        id: '6',
+        title: 'test',
+        img: '/img/sample.jpg',
+        category: '健康',
+        created: '2021.12.1',
+        // frame-data
+        frameId: 3,
+        fText1: '', fText2: '', fText3: '',
+        // postPage-text-data
+        textId: 3,
+        head1: 'Head1', head2: 'Head2', head3: 'Head3',
+        text1: 'aa', text2: 'vv', text3: 'ee',
+        //postPage-talk-data
+        talkId: 2,
+        talk1: 'talk1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4'
+    },
+    {
+        id: '7',
+        title: 'test',
+        img: '/img/sample.jpg',
+        category: '趣味',
+        created: '2021.12.1',
+        // frame-data
+        frameId: 3,
+        fText1: '', fText2: '', fText3: '',
+        // postPage-text-data
+        textId: 3,
+        head1: 'Head1', head2: 'Head2', head3: 'Head3',
+        text1: 'aa', text2: 'vv', text3: 'ee', text7: 'rere',
+        //postPage-talk-data
+        talkId: 2,
+        talk1: 'talk1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4'
+    },
+    {
+        id: '8',
+        title: 'test',
+        img: '/img/sample.jpg',
+        category: '趣味',
+        created: '2021.12.1',
+        // frame-data
+        frameId: 3,
+        fText1: '', fText2: '', fText3: '',
+        // postPage-text-data
+        textId: 3,
+        head1: 'Head1', head2: 'Head2', head3: 'Head3',
+        text1: 'aa', text2: 'vv', text3: 'ee', text7: 'rere',
+        //postPage-talk-data
+        talkId: 2,
+        talk1: 'talk1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4'
+    },
+    {
+        id: '9',
+        title: 'test',
+        img: '/img/sample.jpg',
+        category: 'おすすめ',
+        created: '2021.12.1',
+        // frame-data
+        frameId: 3,
+        fText1: '', fText2: '', fText3: '',
+        // postPage-text-data
+        textId: 3,
+        head1: 'Head1', head2: 'Head2', head3: 'Head3',
+        text1: 'aa', text2: 'vv', text3: 'ee', text7: 'rere',
+        //postPage-talk-data
+        talkId: 2,
+        talk1: 'talk1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4'
+    },
+    {
+        id: '10',
         title: 'test',
         img: '/img/sample.jpg',
         category: 'おすすめ',

@@ -5,6 +5,7 @@ import { Layout } from '../Layout/Layout'
 import { Post } from "../organisms/Post"
 import { CategoryTitle } from '../molcules/main/categoryPage/CategoryTitle'
 import { BreadList } from "../Layout/BreadList"
+import { Inner } from "../Layout/Inner"
 
 
 
@@ -17,6 +18,10 @@ export const Category = () => {
             result = 'hair care'
         } else if (text === 'スキンケア') {
             result = 'skin care'
+        } else if (text === '趣味') {
+            result = 'hobby'
+        } else if (text === '健康') {
+            result = 'health'
         }
         return result
     }
@@ -26,14 +31,20 @@ export const Category = () => {
             result = 'ヘアケア'
         } else if (text === 'スキンケア') {
             result = 'スキンケア'
+        } else if (text === '趣味') {
+            result = '趣味'
+        } else if (text === '健康') {
+            result = '健康'
         }
         return result
     }
     return (
         <Layout>
-            <BreadList home={false} category={true} post={false} categoryText={BreadText()} postText='' />
-            <CategoryTitle />
-            <Post flex={false} title={filterText()} title2={text} data={filterData} />
+            <Inner>
+                <BreadList home={false} category={true} post={false} categoryText={BreadText()} postText='' />
+                <CategoryTitle />
+                <Post home={false} flex={false} title={filterText()} title2={text} data={filterData} />
+            </Inner>
         </Layout>
     )
 }

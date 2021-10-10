@@ -33,7 +33,6 @@ const Post = ({postData}) => {
         <>
         <DataContext.Provider value={{postData}}>
             <PostMain/>
-            {postData[0].category}
         </DataContext.Provider>
         </>
     )

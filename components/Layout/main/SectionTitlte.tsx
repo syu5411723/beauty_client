@@ -11,17 +11,17 @@ const Wrapper = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
-    margin-bottom:45px;
+    margin-bottom:calc(2.5rem + ((1vw - 3.5px) * 4.2105));
 `
 const Title = styled.h2`
-    font-size: 30px;
+    font-size: calc(1.5rem + ((1vw - 3.5px) * 1.7895));
     letter-spacing:1px;
     margin-bottom: 5px;
     font-weight:400;
     font-family: 'Quicksand', sans-serif;
 `
 const Title2 = styled.h3`
-    font-size: 18px;
+    font-size: calc(1.0625rem + ((1vw - 3.5px) * 0.9474));
     letter-spacing: 1px;
     font-family: 'M PLUS 1p', sans-serif;
     font-weight: 100;
