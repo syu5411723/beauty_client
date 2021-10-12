@@ -15,13 +15,21 @@ body {
   margin: 0;
   padding: 0;
 }
+div {
+  letter-spacing:0.1em;
+}
 a {
   text-decoration: none;
   cursor: pointer;
   color: #333;
 }
+p {
+    /* font-size: calc(0.6875rem + ((1vw - 3.5px) * 0.5263)); */
+    letter-spacing: 0.1em;
+}
 li {
   list-style: none;
+  letter-spacing: 0.15em;
 }
 
 /** design **/
@@ -30,6 +38,9 @@ li {
   color:#1558d6;
   display: inline-block;
 }
-#yellow__line {
+.yellow__line {
   background:linear-gradient(transparent 50%, #ffff66 0%);
+}
+.red {
+  color: #DB7093;
 }

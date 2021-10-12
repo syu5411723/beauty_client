@@ -14,15 +14,7 @@ const ImgWrapper = styled.div`
     margin: 0 auto;
     position: relative;
     border-radius: 3px;
-    ${sp`
-        height: 25vw;
-    `}
-    ${tab`
-        height: 25vw;
-    `}
-    ${pc`
-        height: 25vw;
-    `}
+    height: calc(5.625rem + ((1vw - 3.5px) * 13.6842));
 `
 
 export const PostImg: VFC<Props> = ({ img, category }) => {

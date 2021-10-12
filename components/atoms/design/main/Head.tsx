@@ -1,32 +1,47 @@
 ﻿import styled from "styled-components"
+import { pc } from "../../../Layout/media"
 
-type Props = {
-    head: string,
-}
 type HeaderLink = {
     name: string,
 }
 
-const Wrapper = styled.a<HeaderLink>`
-    display:flex;
-    align-items:center;
+const Wrapper = styled.div<HeaderLink>`
+    width:90%;
+    margin:calc(3.4375rem + ((1vw - 3.5px) * 10)) auto 0px;
 `
-const Tab = styled.div`
-    width:5px;
-    height: 50px;
+const LineWrapper = styled.div`
+    display:flex;
+    margin-top: 5px;
+    ${pc`
+    margin-top:10px;
+    `}
+`
+const ColorLine = styled.div`
+    width:30%;
+    height: 2px;
     border-radius:5px;
     background-color: #E2C9D1;
 `
+const Line = styled.div`
+    width:70%;
+    height: 2px;
+    border-radius:5px;
+    background-color: rgba(150, 150, 150, 1);
+`
 const Text = styled.h2`
     font-weight: 300;
+    font-size: calc(1.0625rem + ((1vw - 3.5px) * 0.9474));
 `
 
-export const Head = ({head, HeadLink}) => {
+export const Head = ({ head }) => {
     return (
         <>
-            <Wrapper name={HeadLink} >
-                <Tab />
+            <Wrapper name={head} >
                 <Text>{head}</Text>
+                <LineWrapper>
+                    <ColorLine />
+                    <Line />
+                </LineWrapper>
             </Wrapper>
         </>
     )

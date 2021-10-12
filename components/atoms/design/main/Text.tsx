@@ -1,21 +1,22 @@
 ﻿import { VFC } from "react"
 import styled from "styled-components"
+import { pc } from '../../../Layout/media'
 
 type Props = {
     text: string;
 }
 
-const T = styled.div`
-    font-size: 14px;
-    margin-bottom:20px;
+export const T = styled.div`
+    font-size: calc(0.75rem + ((1vw - 3.5px) * 0.6316));
+    margin-bottom:calc(1.125rem + ((1vw - 3.5px) * 0.7368));
     letter-spacing:0.05em;
     &:last-child {
         margin-bottom: 0;
     }
 `
 
-export const Text:VFC<Props> = ({text}) => {
+export const Text: VFC<Props> = ({ text }) => {
     return (
-        <T dangerouslySetInnerHTML={{__html: text }} />
+        <T dangerouslySetInnerHTML={{ __html: text }} />
     )
 }

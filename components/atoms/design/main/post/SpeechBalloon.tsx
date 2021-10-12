@@ -12,14 +12,15 @@ type Props = {
 
 const Wrapper = styled.div<Style>`
     position:relative;
-    width:250px;
+    min-width:100px;
+    max-width:300px;
     padding:10px;
     line-height:1.5;
     text-align:left;
     color:#333333;
     border:2px solid #E2C9D1;
     font-weight:400;
-    font-size: 13px;
+    font-size: calc(0.75rem + ((1vw - 3.5px) * 0.4211));
     border-radius:12px;
     letter-spacing:0.05em;
     word-wrap:break-word;

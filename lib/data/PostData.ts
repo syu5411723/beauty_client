@@ -1,20 +1,41 @@
 ﻿export const PostData = [
     {
         id: '1',
-        title: 'test',
+        theme: 'meritto',
+        title: '市販トリートメントと美容室のトリートメントの違いとは！？',
         img: '/img/sample.jpg',
         category: 'ヘアケア',
         created: '2021.12.1',
         // frame-data
-        frameId: 3,
-        fText1: 'aa', fText2: 'bb', fText3: 'cc',
-        // postPage-text-data
-        textId: 5,
-        head1: 'Head1', head2: 'Head2', head3: 'Head3',
-        text1: 'ee', text2: 'vv', text3: '<p id="inner__link">aa</p>', text4: '<span id="yellow__line">ee</span>', text5: 'rr',
+        frameId: 4,
+        fText1: 'それぞれのメリット・デメリット', fText2: 'メリット・デメリットの詳細', fText3: '結局どっちが良いの',fText4: 'まとめ',
         //postPage-talk-data
-        talkId: 3,
-        talk1: 'talkr1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4', talk5:'talk5', talk6:'talk6'
+        talkTop1: '今回は美容室のシャンプーと市販のシャンプーはどこが違うのかを紹介していきます。',
+        talkTop2: '実際に美容室でこんな会話をしたことがあります。',
+        talkBottom1: '確かに気になりますね',
+        talkBottom2: 'それではそれぞれの違いをメリットとデメリットを元に見ていきましょう',
+        talkId: 2,
+        talk1: '市販のトリートメントって良くないんですか？？', talk2: '実際には得に悪くはないですよ！', talk3: '美容室のトリートメントの方が良いって聞きますけど、どっちが良いんですか？', talk4: 'どっちも良いところがあるので説明しますね',
+        // if theme is merrito
+        first: 'まずは市販のトリートメントから見ていきましょう', second: '次に美容室のトリートメントです。基本的に市販のものとは反対になります。',
+        merittoId1: 2,
+        meritto1_1: '比較的どこでも入手できる', meritto1_2: '低単価',
+        demerittoId1: 2,
+        demeritto1_1: '保湿や修復作用が足りなく感じることがある', demeritto1_2: '含まれている成分に注意',
+        merittoId2: 2,
+        meritto2_1: '保湿や修復の作用が高い', meritto2_2: '',
+        demerittoId2: 2,
+        demeritto2_1: '高単価のものが多い', demeritto2_2: '入手が難しい',
+        merittoBottom: 'このように<span class="yellow__line">両者のメリットがデメリットに、デメリットがメリットに</span>なることがほとんどです。',
+        // postPage-text-data
+        textDataId: 4,
+        head1: 'メリット・デメリットを比較してみる', head2: 'メリットデメリットの詳細', head3: '結局どちらがいいの？',head4: 'まとめ',head5: 'eww',
+        textId1: 5,
+        text1_1: '1', text1_2: 'vv', text1_3: '<p id="inner__link">aa</p>', text1_4: '<span id="yellow__line">ee</span>', text1_5: 'rr',
+        textId2: 7,
+        text2_1: 'より詳しく見ていきましょう。', text2_2: '市販のトリートメントはドンキ・ホーテやコンビニなどの身近なお店で<span class="red">手軽に安く購入数できる</span>のはとても魅了的ですね', text2_3: 'デメリットとしては人によっては保湿や補修の作用が物足りないと感じることです', text2_4: '<br/>美容室のトリートメントであれば、保湿や補修の作用が十分の場合が多いです。', text2_5: '髪を気遣っているのであれば、保湿や補修の効果が高いにこしたことはありませんよね。',text2_6:'ですが、美容室でしか買えなかったり、通常より値段が高いことも少なくありません。(ネットにあるけど、詰め替えがない時もある)',
+        textId3: 4,
+        text3_1: '結論は何を求めるかによる', text3_2: '', text3_3: '<p id="inner__link">aa</p>', text3_4: '<span id="yellow__line">ee</span>', text3_5: 'rr',
     },
     {
         id: '2',
@@ -23,15 +44,20 @@
         category: 'ヘアケア',
         created: '2021.12.1',
         // frame-data
-        frameId: 3,
-        fText1: 'aa', fText2: 'bb', fText3: 'cc',
+        frameId: 5,
+        fText1: 'aa', fText2: 'bb', fText3: 'cc',fText4: 'dd', fText5: 'ff',
+        //postPage-talk-data
+        talkTop1: '今回は美容室のシャンプーと市販のシャンプーはどこが違うのかを紹介していきます。',
+        talkTop2: '実際に美容室でこんな会話をしたことがあります。',
+        talkBottom1: '今回は美容室のシャンプーと市販のシャンプーはどこが違うのかを紹介していきます。',
+        talkBottom2: '実際に美容室でこんな会話をしたことがあります。',
+        talkId: 2,
+        talk1: 'talk1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4',
         // postPage-text-data
         textId: 4,
-        head1: 'Head1', head2: 'Head2', head3: 'Head3',
-        text1: 'aa', text2: 'vv', text3: 'ee', text4: 'hh',
-        //postPage-talk-data
-        talkId: 2,
-        talk1: 'talk1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4'
+        head1: 'Head1', head2: 'Head2', head3: 'Head3',head4: 'Head4',head5: 'Head5',head6: 'Head6',
+        text1_1: 'aa', text1_2: 'vv', text1_3: 'ee', text4: 'hh',
+
     },
     {
         id: '3',
@@ -42,13 +68,17 @@
         // frame-data
         frameId: 3,
         fText1: '', fText2: '', fText3: '',
+        //postPage-talk-data
+        talkTop1: '今回は美容室のシャンプーと市販のシャンプーはどこが違うのかを紹介していきます。',
+        talkTop2: '実際に美容室でこんな会話をしたことがあります。',
+        talkBottom1: '今回は美容室のシャンプーと市販のシャンプーはどこが違うのかを紹介していきます。',
+        talkBottom2: '実際に美容室でこんな会話をしたことがあります。',
+        talkId: 2,
+        talk1: 'talk1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4',
         // postPage-text-data
         textId: 3,
         head1: 'Head1', head2: 'Head2', head3: 'Head3',
-        text1: 'aa', text2: 'vv', text3: 'ee',
-        //postPage-talk-data
-        talkId: 2,
-        talk1: 'talk1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4'
+        text1_1: 'aa', text1_2: 'vv', text1_3: 'ee',
     },
     {
         id: '4',
@@ -59,13 +89,17 @@
         // frame-data
         frameId: 3,
         fText1: '', fText2: '', fText3: '',
+        //postPage-talk-data
+        talkTop1: '今回は美容室のシャンプーと市販のシャンプーはどこが違うのかを紹介していきます。',
+        talkTop2: '実際に美容室でこんな会話をしたことがあります。',
+        talkBottom1: '今回は美容室のシャンプーと市販のシャンプーはどこが違うのかを紹介していきます。',
+        talkBottom2: '実際に美容室でこんな会話をしたことがあります。',
+        talkId: 2,
+        talk1: 'talk1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4',
         // postPage-text-data
         textId: 3,
         head1: 'Head1', head2: 'Head2', head3: 'Head3',
-        text1: 'aa', text2: 'vv', text3: 'ee',
-        //postPage-talk-data
-        talkId: 2,
-        talk1: 'talk1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4'
+        text1_1: 'aa', text1_2: 'vv', text1_3: 'ee',
     },
     {
         id: '5',
@@ -76,13 +110,17 @@
         // frame-data
         frameId: 3,
         fText1: '', fText2: '', fText3: '',
+        //postPage-talk-data
+        talkTop1: '今回は美容室のシャンプーと市販のシャンプーはどこが違うのかを紹介していきます。',
+        talkTop2: '実際に美容室でこんな会話をしたことがあります。',
+        talkBottom1: '今回は美容室のシャンプーと市販のシャンプーはどこが違うのかを紹介していきます。',
+        talkBottom2: '実際に美容室でこんな会話をしたことがあります。',
+        talkId: 2,
+        talk1: 'talk1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4',
         // postPage-text-data
         textId: 3,
         head1: 'Head1', head2: 'Head2', head3: 'Head3',
-        text1: 'aa', text2: 'vv', text3: 'ee',
-        //postPage-talk-data
-        talkId: 2,
-        talk1: 'talk1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4'
+        text1_1: 'aa', text1_2: 'vv', text1_3: 'ee',
     },
     {
         id: '6',
@@ -93,13 +131,17 @@
         // frame-data
         frameId: 3,
         fText1: '', fText2: '', fText3: '',
+        //postPage-talk-data
+        talkTop1: '今回は美容室のシャンプーと市販のシャンプーはどこが違うのかを紹介していきます。',
+        talkTop2: '実際に美容室でこんな会話をしたことがあります。',
+        talkBottom1: '今回は美容室のシャンプーと市販のシャンプーはどこが違うのかを紹介していきます。',
+        talkBottom2: '実際に美容室でこんな会話をしたことがあります。',
+        talkId: 2,
+        talk1: 'talk1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4',
         // postPage-text-data
         textId: 3,
         head1: 'Head1', head2: 'Head2', head3: 'Head3',
-        text1: 'aa', text2: 'vv', text3: 'ee',
-        //postPage-talk-data
-        talkId: 2,
-        talk1: 'talk1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4'
+        text1_1: 'aa', text1_2: 'vv', text1_3: 'ee',
     },
     {
         id: '7',
@@ -110,13 +152,17 @@
         // frame-data
         frameId: 3,
         fText1: '', fText2: '', fText3: '',
+        //postPage-talk-data
+        talkTop1: '今回は美容室のシャンプーと市販のシャンプーはどこが違うのかを紹介していきます。',
+        talkTop2: '実際に美容室でこんな会話をしたことがあります。',
+        talkBottom1: '今回は美容室のシャンプーと市販のシャンプーはどこが違うのかを紹介していきます。',
+        talkBottom2: '実際に美容室でこんな会話をしたことがあります。',
+        talkId: 2,
+        talk1: 'talk1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4',
         // postPage-text-data
         textId: 3,
         head1: 'Head1', head2: 'Head2', head3: 'Head3',
-        text1: 'aa', text2: 'vv', text3: 'ee', text7: 'rere',
-        //postPage-talk-data
-        talkId: 2,
-        talk1: 'talk1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4'
+        text1_1: 'aa', text1_2: 'vv', text1_3: 'ee', text7: 'rere',
     },
     {
         id: '8',
@@ -127,13 +173,17 @@
         // frame-data
         frameId: 3,
         fText1: '', fText2: '', fText3: '',
+        //postPage-talk-data
+        talkTop1: '今回は美容室のシャンプーと市販のシャンプーはどこが違うのかを紹介していきます。',
+        talkTop2: '実際に美容室でこんな会話をしたことがあります。',
+        talkBottom1: '今回は美容室のシャンプーと市販のシャンプーはどこが違うのかを紹介していきます。',
+        talkBottom2: '実際に美容室でこんな会話をしたことがあります。',
+        talkId: 2,
+        talk1: 'talk1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4',
         // postPage-text-data
         textId: 3,
         head1: 'Head1', head2: 'Head2', head3: 'Head3',
-        text1: 'aa', text2: 'vv', text3: 'ee', text7: 'rere',
-        //postPage-talk-data
-        talkId: 2,
-        talk1: 'talk1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4'
+        text1_1: 'aa', text1_2: 'vv', text1_3: 'ee', text7: 'rere',
     },
     {
         id: '9',
@@ -144,13 +194,17 @@
         // frame-data
         frameId: 3,
         fText1: '', fText2: '', fText3: '',
+        //postPage-talk-data
+        talkTop1: '今回は美容室のシャンプーと市販のシャンプーはどこが違うのかを紹介していきます。',
+        talkTop2: '実際に美容室でこんな会話をしたことがあります。',
+        talkBottom1: '今回は美容室のシャンプーと市販のシャンプーはどこが違うのかを紹介していきます。',
+        talkBottom2: '実際に美容室でこんな会話をしたことがあります。',
+        talkId: 2,
+        talk1: 'talk1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4',
         // postPage-text-data
         textId: 3,
         head1: 'Head1', head2: 'Head2', head3: 'Head3',
-        text1: 'aa', text2: 'vv', text3: 'ee', text7: 'rere',
-        //postPage-talk-data
-        talkId: 2,
-        talk1: 'talk1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4'
+        text1_1: 'aa', text1_2: 'vv', text1_3: 'ee', text7: 'rere',
     },
     {
         id: '10',
@@ -161,12 +215,16 @@
         // frame-data
         frameId: 3,
         fText1: '', fText2: '', fText3: '',
+        //postPage-talk-data
+        talkTop1: '今回は美容室のシャンプーと市販のシャンプーはどこが違うのかを紹介していきます。',
+        talkTop2: '実際に美容室でこんな会話をしたことがあります。',
+        talkBottom1: '今回は美容室のシャンプーと市販のシャンプーはどこが違うのかを紹介していきます。',
+        talkBottom2: '実際に美容室でこんな会話をしたことがあります。',
+        talkId: 2,
+        talk1: 'talk1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4',
         // postPage-text-data
         textId: 3,
         head1: 'Head1', head2: 'Head2', head3: 'Head3',
-        text1: 'aa', text2: 'vv', text3: 'ee', text7: 'rere',
-        //postPage-talk-data
-        talkId: 2,
-        talk1: 'talk1', talk2: 'talk2', talk3: 'talk3', talk4: 'talk4'
+        text1_1: 'aa', text1_2: 'vv', text1_3: 'ee', text7: 'rere',
     },
 ]

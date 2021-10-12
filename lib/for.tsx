@@ -1,84 +1,23 @@
 ﻿import styled from "styled-components"
 import Image from "next/image"
+import { useEffect } from "react"
 
 import { SpeechBalloon } from "../components/atoms/design/main/post/SpeechBalloon"
 import { Text } from '../components/atoms/design/main/Text'
 
-export const result = (i, t1, t2, t3, t4, t5, t6, t7, t8, t9) => {
-    if (i == 3) {
-        return (
-            <>
-                <Text text={t1} />
-                <Text text={t2} />
-                <Text text={t3} />
-            </>
-        )
-    }
-    if (i == 4) {
-        return (
-            <>
-                <Text text={t1} />
-                <Text text={t2} />
-                <Text text={t3} />
-                <Text text={t4} />
-            </>
-        )
-    }
-    if (i == 5) {
-        return (
-            <>
-                <Text text={t1} />
-                <Text text={t2} />
-                <Text text={t3} />
-                <Text text={t4} />
-                <Text text={t5} />
-                <Text text={t6} />
-                <Text text={t7} />
-            </>
-        )
-    }
-    if (i == 6) {
-        return (
-            <>
-                <Text text={t1} />
-                <Text text={t2} />
-                <Text text={t3} />
-                <Text text={t4} />
-                <Text text={t5} />
-                <Text text={t6} />
-            </>
-        )
-    }
-    if (i == 7) {
-        return (
-            <>
-                <Text text={t1} />
-                <Text text={t2} />
-                <Text text={t3} />
-                <Text text={t4} />
-                <Text text={t5} />
-                <Text text={t6} />
-                <Text text={t7} />
-            </>
-        )
-    }
-    if (i == 8) {
-        return (
-            <>
-                <Text text={t1} />
-                <Text text={t2} />
-                <Text text={t3} />
-                <Text text={t4} />
-                <Text text={t5} />
-                <Text text={t6} />
-                <Text text={t7} />
-                <Text text={t8} />
-            </>
-        )
-    }
-    else {
-        ''
-    }
+export const result = (t1, t2, t3, t4, t5, t6, t7, t8, t9) => {
+    return (
+        <>
+            <Text text={t1} />
+            <Text text={t2} />
+            <Text text={t3} />
+            <Text text={t4} />
+            <Text text={t5} />
+            <Text text={t6} />
+            <Text text={t7} />
+            <Text text={t8} />
+        </>
+    )
 }
 
 //  talk  //
@@ -92,17 +31,20 @@ type Props = {
 const Wrapper = styled.div<Props>`
     display:flex;
     align-items:center;
+    margin-bottom: 10px;
     ${({ me }) => me ? `
     flex-direction: row-reverse;
     `: `
     `}
 `
 const ImgWrapper = styled.div<Props>`
-    width:55px;
-    height:55px;
+    width:calc(2.5rem + ((1vw - 3.5px) * 2.1053));
+    height:calc(2.5rem + ((1vw - 3.5px) * 2.1053));
+    min-height:40px;
+    min-width:40px;
     position:relative;
     overflow:hidden;
-    border-radius:100px;
+    border-radius:50%;
     ${({ me }) => me ? `
     margin-left: 20px;
     ` : `
@@ -112,75 +54,60 @@ const ImgWrapper = styled.div<Props>`
 
 
 export const talkRoop = (i, talk1, talk2, talk3, talk4, talk5, talk6) => {
-    if (i == 2) {
+    useEffect(() => {
+        const result = document.getElementById('result')
+        if (i == 2) {
+            result.removeChild(result.children[2])
+        }
+        if (i == 1) {
+            result.removeChild(result.children[2])
+            result.removeChild(result.children[1])
+        }
+    },[])
         return (
-            <>
-                <Wrapper me={false}>
-                    <ImgWrapper me={false}>
-                        <Image src="/img/customer.jpg" layout="fill" objectFit="cover" />
-                    </ImgWrapper>
-                    <SpeechBalloon me={false} text={talk1} />
-                </Wrapper>
-                <Wrapper me={true}>
-                    <ImgWrapper me={true}>
-                        <Image src="/img/profile.jpg" layout="fill" objectFit="cover" />
-                    </ImgWrapper>
-                    <SpeechBalloon me={true} text={talk2} />
-                </Wrapper>
-                <Wrapper me={false}>
-                    <ImgWrapper me={false}>
-                        <Image src="/img/customer.jpg" layout="fill" objectFit="cover" />
-                    </ImgWrapper>
-                    <SpeechBalloon me={false} text={talk3} />
-                </Wrapper>
-                <Wrapper me={true}>
-                    <ImgWrapper me={true}>
-                        <Image src="/img/profile.jpg" layout="fill" objectFit="cover" />
-                    </ImgWrapper>
-                    <SpeechBalloon me={true} text={talk4} />
-                </Wrapper>
-            </>
+            <div id="result" >
+                <div>
+                    <Wrapper me={false}>
+                        <ImgWrapper me={false}>
+                            <Image src="/img/customer.jpg" layout="fill" objectFit="cover" />
+                        </ImgWrapper>
+                        <SpeechBalloon me={false} text={talk1} />
+                    </Wrapper>
+                    <Wrapper me={true}>
+                        <ImgWrapper me={true}>
+                            <Image src="/img/profile.jpg" layout="fill" objectFit="cover" />
+                        </ImgWrapper>
+                        <SpeechBalloon me={true} text={talk2} />
+                    </Wrapper>
+                </div>
+                <div>
+                    <Wrapper me={false}>
+                        <ImgWrapper me={false}>
+                            <Image src="/img/customer.jpg" layout="fill" objectFit="cover" />
+                        </ImgWrapper>
+                        <SpeechBalloon me={false} text={talk3} />
+                    </Wrapper>
+                    <Wrapper me={true}>
+                        <ImgWrapper me={true}>
+                            <Image src="/img/profile.jpg" layout="fill" objectFit="cover" />
+                        </ImgWrapper>
+                        <SpeechBalloon me={true} text={talk4} />
+                    </Wrapper>
+                </div>
+                <div>
+                    <Wrapper me={false}>
+                        <ImgWrapper me={false}>
+                            <Image src="/img/customer.jpg" layout="fill" objectFit="cover" />
+                        </ImgWrapper>
+                        <SpeechBalloon me={false} text={talk5} />
+                    </Wrapper>
+                    <Wrapper me={true}>
+                        <ImgWrapper me={true}>
+                            <Image src="/img/profile.jpg" layout="fill" objectFit="cover" />
+                        </ImgWrapper>
+                        <SpeechBalloon me={true} text={talk6} />
+                    </Wrapper>
+                </div>
+            </div>
         )
-    }else if (i == 3) {
-        return (
-            <>
-                <Wrapper me={false}>
-                    <ImgWrapper me={false}>
-                        <Image src="/img/customer.jpg" layout="fill" objectFit="cover" />
-                    </ImgWrapper>
-                    <SpeechBalloon me={false} text={talk1} />
-                </Wrapper>
-                <Wrapper me={true}>
-                    <ImgWrapper me={true}>
-                        <Image src="/img/profile.jpg" layout="fill" objectFit="cover" />
-                    </ImgWrapper>
-                    <SpeechBalloon me={true} text={talk2} />
-                </Wrapper>
-                <Wrapper me={false}>
-                    <ImgWrapper me={false}>
-                        <Image src="/img/customer.jpg" layout="fill" objectFit="cover" />
-                    </ImgWrapper>
-                    <SpeechBalloon me={false} text={talk3} />
-                </Wrapper>
-                <Wrapper me={true}>
-                    <ImgWrapper me={true}>
-                        <Image src="/img/profile.jpg" layout="fill" objectFit="cover" />
-                    </ImgWrapper>
-                    <SpeechBalloon me={true} text={talk4} />
-                </Wrapper>
-                <Wrapper me={false}>
-                    <ImgWrapper me={false}>
-                        <Image src="/img/customer.jpg" layout="fill" objectFit="cover" />
-                    </ImgWrapper>
-                    <SpeechBalloon me={false} text={talk5} />
-                </Wrapper>
-                <Wrapper me={true}>
-                    <ImgWrapper me={true}>
-                        <Image src="/img/profile.jpg" layout="fill" objectFit="cover" />
-                    </ImgWrapper>
-                    <SpeechBalloon me={true} text={talk6} />
-                </Wrapper>
-            </>
-        )
-    }
 }
