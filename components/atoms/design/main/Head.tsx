@@ -7,7 +7,7 @@ type HeaderLink = {
 
 const Wrapper = styled.div<HeaderLink>`
     width:90%;
-    margin:calc(3.4375rem + ((1vw - 3.5px) * 10)) auto 0px;
+    margin:calc(2.1875rem + ((1vw - 3.5px) * 1.5789)) auto 0px;
 `
 const LineWrapper = styled.div`
     display:flex;

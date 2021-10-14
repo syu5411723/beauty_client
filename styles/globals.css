@@ -39,8 +39,16 @@ li {
   display: inline-block;
 }
 .yellow__line {
-  background:linear-gradient(transparent 50%, #ffff66 0%);
+  background:linear-gradient(transparent 30%, #ffff66 0%);
 }
 .red {
-  color: #DB7093;
+  color: rgba(255,10,0,1);
+  background:linear-gradient(transparent 30%, #ffff66  0%);
+}
+.block {
+  display:block;
+  margin-bottom: calc(0.9375rem + ((1vw - 3.5px) * 2.1053));
+}
+.link {
+  color:#1558d6;
 }

@@ -15,29 +15,33 @@ const Wrapper = styled.div`
     position:absolute;
     z-index: 2;
     ${sp`
-        font-size: 6px;
         width:40%;
         height:30%;
         border-radius:2px;
     `}
     ${tab`
-        font-size: 10px;
         width:33%;
         height:22%;
         border-radius:6px;
     `}
     ${pc`
-        font-size: 12px;
         width:30%;
         height:20%;
         border-radius:10px;
+    `}
+`
+const T = styled.p`
+    font-size:calc(0.375rem + ((1vw - 3.5px) * 0.6316));
+    letter-spacing:0;
+    ${pc`
+        letter-spacing:0.1em;
     `}
 `
 
 export const PostCategory:VFC<Props> = ({category}) => {
     return (
         <Wrapper>
-            <p>{category}</p>
+            <T>{category}</T>
         </Wrapper>
     )
 }

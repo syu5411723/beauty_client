@@ -8,7 +8,7 @@ type Props = {
 
 export const T = styled.div`
     font-size: calc(0.75rem + ((1vw - 3.5px) * 0.6316));
-    margin-bottom:calc(1.125rem + ((1vw - 3.5px) * 0.7368));
+    margin-bottom: calc(1.875rem + ((1vw - 3.5px) * 2.6316));
     letter-spacing:0.05em;
     &:last-child {
         margin-bottom: 0;

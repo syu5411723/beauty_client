@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Link from 'next/link'
 
 import { ProfileBottomText } from '../../atoms/main/profle/ProfileBottomText'
+import { sp } from '../media'
 
 type Props = {
     text: string,
@@ -28,6 +29,9 @@ const Contaienr = styled.div<Style>`
     border: dashed 1px #FFF;
     transition: all 0.1s;
     font-size:calc(0.9375rem + ((1vw - 3.5px) * 1.0526));
+    ${sp`
+    height:35px;
+    `}
     ${({side}) => side && `
         width:70%;
         height: 50px;

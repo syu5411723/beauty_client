@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { HeaderTitle } from "./HeaderTitle"
 import { Line } from "../main/Line"
 import { Nav } from "./Nav"
+import { Dot } from "../../molcules/design/Dot"
 
 const Container = styled.header`
     width:100%;
@@ -37,6 +38,7 @@ const Header = () => {
                 <HeaderTitleWrapper>
                     <HeaderTitle />
                     <Line header={true} />
+                    <Dot />
                 </HeaderTitleWrapper>
                 <NavWrapper>
                     <Nav />

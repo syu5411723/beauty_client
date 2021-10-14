@@ -1,26 +1,33 @@
 ﻿import { VFC } from 'react'
 import styled from 'styled-components'
+import { pc } from '../../../Layout/media'
 
 type Props = {
-    content: string
+    title: string,
+    home: boolean,
 }
-const Wrapper = styled.div`
-    margin-bottom: 20px;
+type Style = {
+    home: boolean,
+}
+const Wrapper = styled.div<Style>`
+    margin: ${({home}) => home ? '15px 0': '4% 3%'} ;
+    ${pc`
+        margin:20px auto 40px;
+    `}
 `
 const Inner = styled.div`
-    padding:5px;
 `
 const Text = styled.p`
-    font-size: 16px;
+    font-size: calc(0.6875rem + ((1vw - 3.5px) * 0.5263));
     letter-spacing:1px;
 
 `
 
-export const PostContent: VFC<Props> = ({ content }) => {
+export const PostContent: VFC<Props> = ({ home, title }) => {
     return (
-        <Wrapper>
+        <Wrapper home={home} >
             <Inner>
-                <Text>{content}</Text>
+                <Text>{title}</Text>
             </Inner>
         </Wrapper>
     )

@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "lib/data/PostData", "lib/data/PostData"  ],
   "exclude": [
     "node_modules"
   ]

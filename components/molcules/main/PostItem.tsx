@@ -53,7 +53,7 @@ export const PostItem: VFC<Props> = ({ home, data, flex }) => {
                                 <PostInner flex={flex} >
                                     <PostImg img={data[i].img} category={data[i].category} />
                                     <Content flex={flex} >
-                                        <PostContent content={data[i].title} />
+                                        <PostContent title={data[i].title} home={home} />
                                         <PostCreated created={data[i].created} />
                                     </Content>
                                 </PostInner>
@@ -69,7 +69,7 @@ export const PostItem: VFC<Props> = ({ home, data, flex }) => {
                                 <PostInner flex={flex} >
                                     <PostImg img={data[i].img} category={data[i].category} />
                                     <Content flex={flex} >
-                                        <PostContent content={data[i].title} />
+                                        <PostContent title={data[i].title} home={home} />
                                         <PostCreated created={data[i].created} />
                                     </Content>
                                 </PostInner>

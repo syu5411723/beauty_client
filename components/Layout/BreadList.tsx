@@ -20,7 +20,7 @@ type Post = {
 }
 
 const Wrapper = styled.div<Category>`
-    width:${({ category }) => category ? '28%' : '38%'};
+    width:${({ category }) => category ? '30%' : '50%'};
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -29,18 +29,21 @@ const Wrapper = styled.div<Category>`
     letter-spacing:0.03em;
 `
 const HomeText = styled.p<Home>`
+    font-size:10px;
     ${({ home }) => !home && `
         color:#1558d6;
         border-bottom:1px solid #1558d6;
     `}
 `
 const CategoryText = styled.p<Category>`
+    font-size:10px;
     ${({ category }) => !category && `
         color:#1558d6;
         border-bottom:1px solid #1558d6;
     `}
 `
 const PostText = styled.p<Post>`
+    font-size:10px;
     ${({ post }) => !post && `
         color:#1558d6;
         border-bottom:1px solid #1558d6;
@@ -73,7 +76,7 @@ export const BreadList: VFC<Props> = ({ home, category, post, categoryText, post
                             <CategoryText category={category}>{categoryText}</CategoryText>
                         </Link>
                         <div>&gt;</div>
-                        <PostText post={post}>{postText}</PostText>
+                        <PostText post={post}>今の記事</PostText>
                     </>
                 )}
             </Wrapper>

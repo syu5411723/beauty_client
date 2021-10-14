@@ -15,7 +15,7 @@ const Wrapper = styled.div`
 `
 const TalkInner = styled.div`
     padding:5%;
-    padding-bottom: calc(1.5625rem + ((1vw - 3.5px) * 4.7368));
+    padding-bottom: calc(0.9375rem + ((1vw - 3.5px) * 1.5789));
 `
 
 export const Talk = () => {

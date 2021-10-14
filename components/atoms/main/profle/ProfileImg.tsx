@@ -2,12 +2,9 @@
 import { VFC } from "react"
 import styled from "styled-components"
 
-import { pc, sp, tab } from '../../../Layout/media'
-
 type Props = {
     side: boolean,
 }
-
 const ImgWrapper = styled.div<Props>`
         position:relative;
         border-radius:50%;
@@ -20,8 +17,6 @@ const ImgWrapper = styled.div<Props>`
         height: calc(7.5rem + ((1vw - 6px) * 4.2857));
     `}
 `
-
-
 export const ProfileImg: VFC<Props> = ({ side }) => {
     return (
         <ImgWrapper side={side} >

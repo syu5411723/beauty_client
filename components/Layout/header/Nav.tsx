@@ -32,7 +32,7 @@ const LineWrapper = styled.div`
 `
 const Item = styled.p`
     ${sp`
-        font-size: 11px;
+        font-size: 10px;
     `}
     ${tab`
         font-size:16px
