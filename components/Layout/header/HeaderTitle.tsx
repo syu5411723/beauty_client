@@ -19,7 +19,7 @@ const Title = styled.h1`
 `
 export const HeaderTitle = () => {
     return (
-        <Link href='/'>
+        <Link href='/' scroll={false}>
             <Title>IT美容師のすすめ</Title>
         </Link>
     )

@@ -1,6 +1,6 @@
 ﻿import styled from 'styled-components'
 import { VFC } from 'react'
-import Link from 'next/dist/client/link'
+import Link from 'next/link'
 
 import { PostContent } from '../../atoms/main/posts/PostContent'
 import { PostCreated } from '../../atoms/main/posts/PostCreated'

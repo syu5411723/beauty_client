@@ -2,13 +2,13 @@
 import { ContentFrame2 } from '../../atoms/design/main/profile/ContentFrame2'
 import { IntroText } from '../../molcules/design/IntroText'
 
-export const Intoro = ({ iText1, iText2, iText3, iText4, iText5, hText1, hText2, hText3 }) => {
+export const Intoro = () => {
     return (
         <>
-            <IntroText text1={iText1} text2={iText2} text3={iText3} />
-            <ContentFrame text1={hText1} text2={hText2} text3={hText3} />
-            <IntroText text1={iText4} text2={iText5} text3='' />
-            <ContentFrame2 text1={hText1} text2={hText2} text3={hText3} />
+            <IntroText text1='はじめまして、柊 シュウと申します！' text2='私のブログを見てくださってありがとうございます' text3='このページでは、' />
+            <ContentFrame />
+            <IntroText text1='について紹介します' text2="このブログに興味を持ってくださった人へ、少しでもブログとわたしのことについて知っていただければ嬉しいです！" text3='' />
+            <ContentFrame2 />
         </>
     )
 }

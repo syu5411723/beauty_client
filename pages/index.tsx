@@ -6,7 +6,7 @@ const index = () => {
   return (
     <>
       <Head>
-        <title>美容ソムリエの</title>
+        <title>IT美容師の美容ログ ヘアケア 髪</title>
       </Head>
       <Home />
     </>

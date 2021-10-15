@@ -77,6 +77,7 @@ const Text = styled.li`
     margin:15px 0;
     color:#333;
     font-size: calc(0.75rem + ((1vw - 3.5px) * 0.4211));
+    cursor:pointer;
 `
 const Wrapper = styled.div`
     display:fixed;
@@ -121,7 +122,7 @@ const Result = () => {
             </Text>
             <Text>
                 <Link to={postData[0].head3} smooth={true} duration={100}>
-                <Wrapper>
+                    <Wrapper>
                         <ListLine />
                         {postData[0].fText3}
                     </Wrapper>
@@ -129,7 +130,7 @@ const Result = () => {
             </Text>
             <Text>
                 <Link to={postData[0].head4} smooth={true} duration={100}>
-                <Wrapper>
+                    <Wrapper>
                         <ListLine />
                         {postData[0].fText4}
                     </Wrapper>
@@ -137,7 +138,7 @@ const Result = () => {
             </Text>
             <Text>
                 <Link to={postData[0].head5} smooth={true} duration={100}>
-                <Wrapper>
+                    <Wrapper>
                         <ListLine />
                         {postData[0].fText5}
                     </Wrapper>

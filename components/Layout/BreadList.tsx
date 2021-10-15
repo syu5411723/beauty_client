@@ -59,7 +59,7 @@ export const BreadList: VFC<Props> = ({ home, category, post, categoryText, post
                 {home && <HomeText home={home}>Home</HomeText>}
                 {category && (
                     <>
-                        <Link href='/'>
+                        <Link href='/' scroll={false}>
                             <HomeText home={home}>Home</HomeText>
                         </Link>
                         <div>&gt;</div>
@@ -68,11 +68,11 @@ export const BreadList: VFC<Props> = ({ home, category, post, categoryText, post
                 )}
                 {post && (
                     <>
-                        <Link href='/'>
+                        <Link href='/' scroll={false}>
                             <HomeText home={home}>Home</HomeText>
                         </Link>
                         <div>&gt;</div>
-                        <Link href={`/category/${categoryText}`}>
+                        <Link href={`/category/${categoryText}`} scroll={false}>
                             <CategoryText category={category}>{categoryText}</CategoryText>
                         </Link>
                         <div>&gt;</div>

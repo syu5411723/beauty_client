@@ -49,7 +49,7 @@ const Dot = styled.div`
 
 export const Button: VFC<Props> = ({ side, text, link }) => {
     return (
-        <Link href={link} >
+        <Link href={link} scroll={false} >
             <Contaienr side={side}>
                 <ProfileBottomText text={text} />
                 <Dot>...</Dot>

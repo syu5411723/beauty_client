@@ -1,4 +1,5 @@
 ﻿import { createContext } from 'react'
+import Head from 'next/head'
 
 import { Category } from '../../components/pages/CategoryMain'
 import { PostData } from '../../lib/data/PostData';
@@ -30,6 +31,9 @@ export const DataContext = createContext({} as ContextProps)
 const CategoryPage = ({filterData}) => {
     return (
         <>
+        <Head>
+            <title>{filterData[0].categorySeo}</title>
+        </Head>
             <DataContext.Provider value={{ filterData }} >
                 <Category />
             </DataContext.Provider>

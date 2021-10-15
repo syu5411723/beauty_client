@@ -10,6 +10,7 @@ import { BreadList } from '../Layout/BreadList'
 import { Inner } from '../Layout/Inner'
 import styled from 'styled-components'
 import { TextRoop } from '../molcules/design/TextRoop'
+import { PostHead } from '../molcules/design/PostHead'
 
 const Container = styled.div`
     box-shadow:0px 0px 5px #c8c8c8, 0px 0px 5px #c8c8c8;
@@ -28,6 +29,7 @@ export const PostMain = () => {
                 <BreadList home={false} category={false} post={true} categoryText={postData[0].category} postText={postData[0].title} />
                 <Container>
                     <ContentInner>
+                        <PostHead  />
                         <HeadFrame />
                         <Talk />
                         {TextRoop()}

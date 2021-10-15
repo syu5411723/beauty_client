@@ -2,9 +2,10 @@
 export const PostData = [
     {
         id: '1',
+        seo: 'IT美容師の美容ログ ヘアケア シャンプー トリートメント',
         theme: 'meritto',
         title: '市販トリートメントと美容室のトリートメントの違いとは！？',
-        img: '/img/sample.jpg',
+        img: '/img/posts/post02.jpg',
         category: 'ヘアケア',
         created: '2021.12.1',
         // frame-data
@@ -32,8 +33,8 @@ export const PostData = [
         textDataId: 4,
         head1: 'メリット・デメリットを比較してみる', head2: 'メリットデメリットの詳細', head3: '結局どちらがいいの？',head4: 'まとめ',head5: 'eww',
         // text1_1: '1', text1_2: 'vv', text1_3: '<p id="inner__link">aa</p>', text1_4: '<span id="yellow__line">ee</span>', text1_5: 'rr',
-        text2_1: 'より詳しく見ていきましょう。', text2_2: '<span class="block">市販のトリートメントはドンキ・ホーテやコンビニなどの身近なお店で<span class="red">手軽に安く購入数できる</span>のはとても魅了的ですね</span>デメリットとしては人によっては<span class="yellow__line">保湿や補修の作用が物足りない</span>と感じることです',text2_3:'（私は試しに3ヶ月間、市販のものを使用したことがありますが、すぐに美容室のものに戻したことがあります）', text2_4: '美容室のトリートメントであれば、<span class="red">保湿や補修の作用が十分</span>の場合が多いです。', text2_5: '髪を気遣っているのであれば、保湿や補修の効果が高いにこしたことはありませんよね', text2_6: '',text2_7:'ですが、<span class="yellow__line">美容室でしか買えなかったり、通常より値段が高いこ</span>とも少なくありません。(ネットにあるけど、詰め替えがない時もある)',
-        text3_1: '結論は<span class="red">何を求めるか</span>によります。', text3_2: '<span class="block">手軽に安く髪を手入れしたいなら市販のものを選択しましょう。</span>値段より美しさを求めるなら美容室のものを選択しましょう',text3_3:'', text3_4: '<span class="block">ただここで注意すべきことがあります。</span>どちらも値段が高くなれば自分に合うとは限らないです', text3_5: '<span class="block" />髪質やくせは人それぞれなので、会ったものを使用するのが理想です。</.span>髪質に会ったトリートメントを選ぶ方法は<a class="link"href="/">こちら</a>', text3_6: '',
+        text2_1: 'より詳しく見ていきましょう。', text2_2: '<span class="block">市販のトリートメントはドンキ・ホーテやコンビニなどの身近なお店で<span class="red">手軽に安く購入数できる</span>のはとても魅了的ですね</span>デメリットとしては人によっては<span class="yellow__line">保湿や補修の作用が物足りない</span>と感じることです',text2_3:'（私は試しに3ヶ月間、市販のものを使用したことがありますが、すぐに美容室のものに戻したことがあります）', text2_4: '<img class="img" src="/img/posts/post06.jpg" alt=""/>美容室のトリートメントであれば、<span class="red">保湿や補修の作用が十分</span>の場合が多いです。', text2_5: '髪を気遣っているのであれば、保湿や補修の効果が高いにこしたことはありませんよね', text2_6: '',text2_7:'ですが、<span class="yellow__line">美容室でしか買えなかったり、通常より値段が高いこ</span>とも少なくありません。(ネットにあるけど、詰め替えがない時もある)',
+        text3_1: '結論は<span class="red">何を求めるか</span>によります。', text3_2: '<span class="block">手軽に安く髪を手入れしたいなら市販のものを選択しましょう。</span>値段より美しさを求めるなら美容室のものを選択しましょう', text3_3: '<img class="img" src="/img/posts/hair05.jpg"/><span class="block">ただここで注意すべきことがあります。</span>どちらも値段が高くなれば自分に合うとは限らないです', text3_4: '<span class="block" />髪質やくせは人それぞれなので、会ったものを使用するのが理想です。</.span>髪質に会ったトリートメントを選ぶ方法は<a class="link"href="/">こちら</a>', text3_5: '',
         text4_1: '美容室で働いている身としてはお客様の髪を美しくしたいと思っているので、やはり美容室のものをお勧めしています。', text4_2: '今まで市販のトリートメントを使用してきた人は<span class="yellow__line">1度美容室のシャンプーを使ってみて、効果を実感してみるて判断するのがいいでしょう。</span>（美容室でどんなのがいいか相談するのを推奨）',
     },
     {

@@ -28,7 +28,7 @@ export const SideCategoryList = () => {
         <Wrapper>
             <Inner>
                 {filterData.map(post => (
-                    <Link key={post.id} href={`/category/${post.category}`}>
+                    <Link key={post.id} href={`/category/${post.category}`} scroll={false}>
                         <Item>
                             <Icon>&gt;</Icon>
                             <Text>{post.category}</Text>

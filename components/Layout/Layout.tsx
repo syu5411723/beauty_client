@@ -32,7 +32,7 @@ const topV = {
 export const Layout = ({ children }) => {
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, []);
+    },[]);
     const [ref, inView] = useInView({
         rootMargin: '-50px 0px',
     })
