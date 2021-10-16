@@ -1,6 +1,7 @@
 ﻿import { VFC } from "react"
 import styled from "styled-components"
-import {T} from '../Text'
+import { Text } from "../Text"
+
 type Props = {
     text1: string,
     text2: string,
@@ -13,8 +14,8 @@ const Wrapper = styled.div`
 export const TalkHead:VFC<Props> = ({text1, text2}) => {
     return (
         <Wrapper>
-            <T>{text1}</T>
-            <T>{text2}</T>
+            <Text text={text1} />
+            <Text text={text2} />
         </Wrapper>
     )
 }

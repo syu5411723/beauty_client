@@ -19,12 +19,22 @@ export const Text = styled.div`
     }
 `
 
-export const ContentFrame = () => {
+export const ContentFrame = ({primary, text1, text2, text3, text4 }) => {
     return (
         <Wrapper>
-            <Text>このブログについて</Text>
-            <Text>プロフィール</Text>
-            {/* <Text></Text> */}
+            {primary ? (
+                <>
+                    <Text>{text1}</Text>
+                    <Text>{text2}</Text>
+                </>
+            ) : (
+                <>
+                    <Text>{text1}</Text>
+                    <Text>{text2}</Text>
+                    <Text>{text3}</Text>
+                    <Text>{text4}</Text>
+                </>
+            )}
         </Wrapper>
     )
 }

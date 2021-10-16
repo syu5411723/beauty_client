@@ -38,4 +38,4 @@ export const PostMain = () => {
             </Inner>
         </Layout >
     )
-}
+}   
