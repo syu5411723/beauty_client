@@ -4,8 +4,9 @@ import { useEffect } from "react"
 
 import { SpeechBalloon } from "../components/atoms/design/main/post/SpeechBalloon"
 import { Text } from '../components/atoms/design/main/Text'
+import { InternalLink } from "../components/Layout/InternalLink/InternalLink"
 
-export const result = (t1, t2, t3, t4, t5, t6, t7, t8, t9) => {
+export const Result = ({t1, t2, t3, t4, t5, t6, t7, t8, t9, isLink, linkText, link, headText, img, contentText }) => {
     return (
         <>
             <Text text={t1} />
@@ -16,6 +17,7 @@ export const result = (t1, t2, t3, t4, t5, t6, t7, t8, t9) => {
             <Text text={t6} />
             <Text text={t7} />
             <Text text={t8} />
+            <InternalLink isLink={isLink} headText={headText} linkText={linkText}  img={img} link={link} contentText={contentText} />
         </>
     )
 }

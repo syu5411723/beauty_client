@@ -17,16 +17,10 @@ const LineWrapper = styled.div`
     `}
 `
 const ColorLine = styled.div`
-    width:30%;
+    width:100%;
     height: 2px;
-    border-radius:5px;
+    border-radius:1%;
     background-color: #E2C9D1;
-`
-const Line = styled.div`
-    width:70%;
-    height: 2px;
-    border-radius:5px;
-    background-color: rgba(150, 150, 150, 1);
 `
 const Text = styled.h2`
     font-weight: 300;
@@ -40,7 +34,6 @@ export const Head = ({ head }) => {
                 <Text>{head}</Text>
                 <LineWrapper>
                     <ColorLine />
-                    <Line />
                 </LineWrapper>
             </Wrapper>
         </>
