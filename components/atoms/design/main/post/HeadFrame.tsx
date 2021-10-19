@@ -99,6 +99,8 @@ const Result = () => {
             frame.removeChild(frame.children[3])
         }
         if (i == 4) {
+            frame.removeChild(frame.children[6])
+            frame.removeChild(frame.children[5])
             frame.removeChild(frame.children[4])
         }
     })
@@ -141,6 +143,22 @@ const Result = () => {
                     <Wrapper>
                         <ListLine />
                         {postData[0].fText5}
+                    </Wrapper>
+                </Link>
+            </Text>
+            <Text>
+                <Link to={postData[0].head6} smooth={true} duration={100}>
+                    <Wrapper>
+                        <ListLine />
+                        {postData[0].fText6}
+                    </Wrapper>
+                </Link>
+            </Text>
+            <Text>
+                <Link to={postData[0].head7} smooth={true} duration={100}>
+                    <Wrapper>
+                        <ListLine />
+                        {postData[0].fText7}
                     </Wrapper>
                 </Link>
             </Text>

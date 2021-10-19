@@ -49,6 +49,9 @@ li {
   display:block;
   margin-bottom: calc(0.9375rem + ((1vw - 3.5px) * 2.1053));
 }
+.bold {
+  font-weight: 900;
+}
 .link {
   color:#1558d6;
   border-bottom: 1px solid #1558d6;
@@ -59,4 +62,29 @@ li {
   display:block;
   margin:0 auto calc(0.9375rem + ((1vw - 3.5px) * 1.5789));
   border-radius: 1%;
+}
+
+.list_block {
+  display:block;
+  margin: 0 auto;
+  border-radius: 2%;
+  border: 1px solid rgba(200, 200, 200, 1);;
+}
+.decimal {
+  padding:3%;
+  padding-bottom: 0;
+}
+.disc {
+  padding:5%;
+  padding-bottom: 0;
+}
+.decimal > li {
+  list-style-position: inside;
+  list-style-type: decimal;
+  margin-bottom: calc(0.9375rem + ((1vw - 3.5px) * 2.1053));
+}
+.disc > li {
+  list-style-position: inside;
+  list-style-type: disc;
+  margin-bottom: calc(0.9375rem + ((1vw - 3.5px) * 2.1053));
 }
