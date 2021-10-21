@@ -20,15 +20,20 @@ const TalkInner = styled.div`
 
 export const Talk = () => {
     const { postData } = useContext(DataContext)
+    const ifTalk = postData[0].ifTalk
     return (
         <>
-            <TalkHead text1={postData[0].talkTop1} text2={postData[0].talkTop2} />
-            <Wrapper>
-                <TalkInner>
-                    {talkRoop(postData[0].talkId, postData[0].talk1, postData[0].talk2, postData[0].talk3, postData[0].talk4, postData[0].talk5, postData[0].talk6)}
-                </TalkInner>
-            </Wrapper>
-            <TalkHead text1={postData[0].talkBottom1} text2={postData[0].talkBottom2} />
+            {ifTalk && (
+                <>
+                    <TalkHead text1={postData[0].talkTop1} text2={postData[0].talkTop2} />
+                    <Wrapper>
+                        <TalkInner>
+                            {talkRoop(postData[0].talkId, postData[0].talk1, postData[0].talk2, postData[0].talk3, postData[0].talk4, postData[0].talk5, postData[0].talk6)}
+                        </TalkInner>
+                    </Wrapper>
+                    <TalkHead text1={postData[0].talkBottom1} text2={postData[0].talkBottom2} />
+                </>
+            )}
         </>
     )
 }
