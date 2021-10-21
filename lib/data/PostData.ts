@@ -156,12 +156,12 @@ export const PostData = [
         fText1: '洗い流すトリートメントとの違い', fText3: 'おすすめの使い方', fText: '洗い流さないトリートメントの重要性', fText4: 'まとめ',
         //postPage-talk-data
         ifTalk: false,
-        talkTop1: '',
-        talkTop2: '',
-        talkBottom1: '',
-        talkBottom2: '',
-        talkId: 2,
-        talk1: '', talk2: '', talk3: '', talk4: '',
+        // talkTop1: '',
+        // talkTop2: '',
+        // talkBottom1: '',
+        // talkBottom2: '',
+        // talkId: 2,
+        // talk1: '', talk2: '', talk3: '', talk4: '',
         // postPage-text-data
         textDataId: 4,
         head1: '洗い流すトリートメントとの違い', head2: '洗い流さないトリートメントのおすすめの使い方', head3: '洗い流さないトリートメントの重要性', head4: 'まとめ',
